@@ -1,0 +1,47 @@
+@import "theme-one";
+@import "theme-two";
+@import "theme-three";
+
+$themes: (
+//Dark Theme
+  dark_theme: (
+
+      //colors
+      black-color:$dr-black-color,
+      white-color:$dr-white-color,
+      yellow-color:$dr-yellow-color,
+      green-color:$dr-green-color,
+      red-color:$dr-red-color,
+      gray-color:$dr-gray-color,
+      blue-color:$dr-blue-color,
+
+      //Fonts
+      font-xs:$dr-font-xs,
+      font-sm:$dr-font-sm,
+      font-md:$dr-font-md,
+      font-lg:$dr-font-lg,
+
+      //Border-size
+      border-xs:$dr-border-xs,
+      border-sm:$dr-border-sm,
+      border-md:$dr-border-md,
+      border-lg:$dr-border-lg,
+
+
+  ),
+  //Light Theme
+  light_theme: (
+      black-color:$lt-black-color,
+      white-color:$lt-white-color,
+      yellow-color:$lt-yellow-color,
+      green-color:$lt-green-color,
+      red-color:$lt-red-color,
+      gray-color:$lt-gray-color,
+
+      //Fonts
+      font-xs:$lt-font-xs,
+      font-sm:$lt-font-sm,
+      font-md:$lt-font-md,
+      font-lg:$lt-font-lg,
+  )
+);

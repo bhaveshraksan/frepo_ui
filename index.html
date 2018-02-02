@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="robots" content="index, follow">
+    <title>SCSS Changes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('.footer_arrow').click(function(){
+          $("footer").toggleClass("footer_close");
+          $(this).parents('footer').find(".footer_arrow span").toggleClass('fa-angle-double-down fa-angle-double-up');
+        });
+
+        $(function () { 
+$('[data-toggle="tooltip"]').tooltip({trigger: 'manual'}).tooltip('show');
+}); 
+
+// $( window ).scroll(function() { 
+// if($( window ).scrollTop() > 10){ // scroll down abit and get the action 
+$(".progress-bar").each(function(){
+each_bar_width = $(this).attr('aria-valuenow');
+$(this).width(each_bar_width + '%');
+});
+
+          var mySwiper = new Swiper('.swiper-month', {
+            speed: 400,
+            loop: true,
+            slidesPerView:'auto',
+            mousewheelControl:true
+          });
+
+          var swiper = new Swiper('.swiper-day', {
+            slidesPerView: 7,
+            spaceBetween: 10,
+            loop: true,
+            centeredSlides: true,
+          });
+
+
+      });
+
+
+
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function(){
+  let body = document.querySelector('body');
+  document.querySelector('.themeselect').addEventListener('change', handleThemeSelect);
+  function handleThemeSelect(event) {
+    event.preventDefault();
+    
+    // change body class
+    body.className = event.target.value;
+  };
+  
+});
+    </script>
+  </head>
+  <body class="dark_theme">
+  <div class="app_fieldrepo">
+    <header>  
+  <div class="row nomargin">
+    <div class="col-md-4 nopadding">
+      <a href="#">
+        <img src="images/logo-fieldrepo.png" class="img-responsive main_logo">
+      </a>
+    </div>
+    <div class="col-md-8 nopaddingright right">
+    
+      <span class="date_time pull-left">
+        04 NOV 2018<br />
+        <b>9:15 AM</b>
+      </span>
+      <div class="profile_img">
+      <img src="images/profile_pic.jpg">
+      <span class="fr-profile_awards"></span>
+    </div>
+    <a href="#" class="header_notifacation">
+      <b>125</b>
+        <span class="fr fr-notification"></span>
+    </a>
+    <a href="#" class="header_notifacation">
+      <b>125</b>
+        <span class="fr fr-message"></span>
+    </a>
+    <a href="#" class="header_notifacation">
+      <i class="fr fr-wifi"></i>
+    </a>
+    <a href="#" class="header_notifacation">
+      <div class="checkbox-switch">
+      <input type="checkbox" checked="" onchange="T.toggleToobarStatus()" value="1" name="status" class="input-checkbox" id="toolbar-active">
+      <div class="checkbox-animate">
+        <span class="checkbox-on">Online</span>
+        <span class="checkbox-off">Offline</span>
+      </div>
+    </div>
+
+
+    </a>
+    <a href="#" class="header_notifacation">
+  <input type="search" placeholder="Search">
+      
+    </a>
+    </div>
+    </div>
+  </header>
+  <div class="container-fluid">
+    <div class="row">
+    <div class="col-md-3">
+    <div class="row progress_block">
+      <div class="col-md-3 nopaddingright text-center">My Rank<br /><div class="fa fa-star fa-3x"><span>25</span></div>
+      <span class="location">Zonal</span>
+      </div>
+      <div class="col-md-6 nopaddingright text-center">
+        <div class="barWrapper">
+          <span class="progressText">Sales Achieved</span>
+          <div class="progress">
+            <div class="progress-bar red" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" > 
+              <span class="popOver" data-toggle="tooltip" data-placement="top" title="#"> </span> 
+              <span class="progress-value">Rs 24,000</span> 
+            </div>
+          </div>
+          <span><b class="color_red">Target:</b>Rs.35,34,000</span>
+        </div>
+      </div>
+      <div class="col-md-3 nopaddingright text-center">
+      <b class="color_green font_lg">09</b><br />
+      Days<br /> to go
+      </div>
+    </div>
+      <div class="left_curve">
+        <div class="box">
+          <h1>Performance Analytics</h1>
+            <ul>
+              <li>
+                <b class="color_green">15 <span class="fa fa-eye color_yellow" aria-hidden="true"></span></b>
+                <p>Dr.Call Average</p>
+              </li>
+              <li>
+                <b class="color_green">32% <span class="fa fa-eye color_yellow" aria-hidden="true"></span></b>
+                <p>Dr.Coverage %</p>
+              </li>
+              <li>
+                <b class="color_green">23</b>
+                <p>Budget Target Achieved</p>
+              </li>
+              <li>
+                <b class="color_green">8%</b>
+                <p>HQ Receivable % Avg [ in Days ]</p>
+              </li>
+              <li>
+                <b class="color_red">23</b>
+                <p>Build Brand Target Achieved</p>
+              </li>
+              <li>
+                <b class="color_red">6d <span class="fa fa-eye color_yellow" aria-hidden="true"></span></b>
+                <p>Expenses Submission Pending</p>
+              </li>
+              <li>
+                <b class="color_green">23</b>
+                <p>Inventory Request Pending</p>
+              </li>
+              <li>
+                <b class="color_green">2</b>
+                <p>New Travel Requests</p>
+              </li>
+              <li>
+                <b class="color_green">5</b>
+                <p>Joint Work Request Pending</p>
+              </li>
+              <li>
+                <b class="color_green">4 <span class="fa fa-eye color_yellow" aria-hidden="true"></span></b>
+                <p>New Updates From Manager</p>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+
+        <div class="swiper-container swiper-month">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">January</div>
+            <div class="swiper-slide">February</div>
+            <div class="swiper-slide">March</div>
+            <div class="swiper-slide">April</div>
+            <div class="swiper-slide">May</div>
+            <div class="swiper-slide">June</div>
+            <div class="swiper-slide">July</div>
+            <div class="swiper-slide">August</div>
+            <div class="swiper-slide">September</div>
+            <div class="swiper-slide">October</div>
+            <div class="swiper-slide">November</div>
+            <div class="swiper-slide">December</div>
+          </div>
+        <!-- Add Arrows -->
+            <div class="swiper-button-prev"><span class="fa fa-caret-left fa-2x"></span></div>
+            <div class="swiper-button-next"><span class="fa fa-caret-right fa-2x"></span></div>
+        </div>
+        <div class="swiper-container swiper-day">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><p class="date_swipe"><b></b>01</p></div>
+            <div class="swiper-slide"><p class="date_swipe"><b></b>02</p></div>
+            <div class="swiper-slide"><p class="date_swipe"><b></b>03</p></div>
+            <div class="swiper-slide"><p class="date_swipe"><b></b>04</p></div>
+            <div class="swiper-slide"><p class="date_swipe"><b></b>05</p></div>
+            <div class="swiper-slide"><p class="date_swipe"><b></b>06</p></div>
+            <div class="swiper-slide"><p class="date_swipe"><b></b>07</p></div>
+            <div class="swiper-slide"><p class="date_swipe"><b></b>08</p></div>
+            <div class="swiper-slide"><p class="date_swipe"><b></b>09</p></div>
+            <div class="swiper-slide"><p class="date_swipe"><b></b>10</p></div>
+          </div>
+        </div>
+      <div class="middle_curve">
+      <h1>
+        <span class="pull-left">
+          <b>Station:</b> Hyd
+        </span>
+        <span class="pull-right">
+          <b>Circuit For:</b> 04th Nov 2017 (Saturday)
+        </span>
+      </h1>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3806.2034899438754!2d78.3610176144399!3d17.449971888041144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1516088529552" frameborder="0" style="border:0"></iframe>
+
+        <div class="row">
+          <div class="col-md-6 border-right-white">
+            <ul class="left">
+              <li>                
+                <b class="color_green">15</b>
+                <p><i class="fa fa-eye pull-right fa-2x color_yellow" aria-hidden="true"></i>Total<br /> Appointments</p>
+              </li>
+              <li>
+                <b class="color_green">07</b>
+                <p>Appointment<br /> Complentes</p>
+              </li>
+              <li>
+                <b class="color_red">03</b>
+                <p>Appointment<br /> Missed</p>
+              </li>
+              <li>
+                <b class="color_green">03</b>
+                <p>Appointment<br /> Re-Scheduled</p>
+              </li>
+              <li>
+                <b class="color_green">02</b>
+                <p>Appointment<br /> Cancelled</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="right">
+              <li>
+                <span><b class="color_green">06</b>/<b class="color_green">10</b></span>
+                <p>Doctors<br /> [Achived/Planned]</p>
+              </li>
+              <li>
+                <span><b class="color_green">03</b>/<b class="color_red">10</b></span>
+                <p>Pharmacists<br /> [Achived/Planned]</p>
+              </li>
+              <li>
+                <span><b class="color_green">01</b>/<b class="color_green">03</b></span>
+                <p>Hospitals<br /> [Achived/Planned]</p>
+              </li>
+              <li>
+                <span><b class="color_yellow">03</b>/<b class="color_yellow">03</b></span>
+                <p>Distributors<br /> [Achived/Planned]</p>
+              </li>
+              <li>
+                <span><b class="color_green">00</b>/<b class="color_green">00</b></span>
+                <p>Instituions<br /> [Achived/Planned]</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2 text-right">Focus On</div>
+          <div class="col-md-7">sdasd</div>
+          <div class="col-md-3 text-left">Offline Re-Download</div>
+        </div>
+      
+        
+      </div>
+    </div>
+    <div class="col-md-3">
+    <div class="row progress_block">
+      <div class="col-md-8">
+        <div class="barWrapper">
+          <span class="progressText">Revenue Per Dr/Unit</span>
+          <div class="progress tooltip_none">
+            <div class="progress-bar yellow" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" > 
+              <span class="popOver" data-toggle="tooltip" data-placement="top" title="#"> </span> 
+              <span class="progress-value">Rs 24,000</span> 
+            </div>
+          </div>
+        </div>
+        <div class="barWrapper">
+          <span class="progressText">Spnd Per Dr/Unit</span>
+          <div class="progress tooltip_none">
+            <div class="progress-bar yellow" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" > 
+              <span class="popOver" data-toggle="tooltip" data-placement="top" title="#"> </span> 
+              <span class="progress-value">Rs 24,000</span> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4"><br/><br/>
+        <b class="color_yellow font_lg">8X</b><br />
+      </div>
+    </div>
+      <div class="right_curve">
+        <div class="box">
+        <h1>Performance Analytics</h1>
+        <ul>
+          <li>
+            <p>Distributors</p>
+            <span class="circle md border-yellow">229</span>
+            <span class="circle xs fill-white border-red"><span class="fr fr-campaigns_input"></span>6%</span>
+          </li>
+          <li>
+            <p>Distributors</p>
+            <span class="circle md border-yellow">229</span>
+            <span class="circle xs fill-white border-red"><span class="fr fr-campaigns_input"></span>6%</span>
+          </li>
+          <li>
+            <p>Distributors</p>
+            <span class="circle md border-yellow">229</span>
+            <span class="circle xs fill-white border-red"><span class="fr fr-campaigns_input"></span>6%</span>
+          </li>
+          <li>
+            <p>Distributors</p>
+            <span class="circle md border-yellow">229</span>
+            <span class="circle xs fill-white border-red"><span class="fr fr-campaigns_input"></span>6%</span>
+          </li>
+          <li>
+            <p>Distributors</p>
+            <span class="circle md border-yellow">229</span>
+            <span class="circle xs fill-white border-red"><span class="fr fr-campaigns_input"></span>6%</span>
+          </li>
+        </ul>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <footer>
+  <div class="footer_arrow">
+    <span class="fr fa fa-angle-double-down"></span>
+  </div>
+    <ul>
+      <li>
+        <a href="#">
+          <span class="fr fr-wifi"></span>
+          Text here
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="fr fr-playlist"></span>
+          Playlist
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="fr fr-newsfeed"></span>
+          Newsfeed
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="fr fr-e-learning"></span>
+          e-Learning
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="fr fr-campaigns"></span>
+          Campaigns
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="fr fr-wifi"></span>
+          Text here
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="fr fr-orders"></span>
+          Orders
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="fr fr-expense"></span>
+          Expense
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="fr fr-inventory"></span>
+          Inventory
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="fr fr-reports_forms"></span>
+          Reports & Forms
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="fr fr-appointment_listing"></span>
+          Appointment Listing
+        </a>
+      </li>
+    </ul>
+  </footer>
+  </div>
+
+
+   
+  </body>
+</html>
