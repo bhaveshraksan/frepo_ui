@@ -1,4 +1,25 @@
 
+    
+  Template.wrraper.onRendered(function () {
+
+         var swiper = new Swiper('.swiper-day', {
+            slidesPerView: 7,
+            spaceBetween: 10,
+            loop: true,
+            centeredSlides: true,
+          });
+
+            var mySwiper = new Swiper('.swiper-month', {
+            speed: 400,
+            loop: true,
+            slidesPerView:'auto',
+            mousewheelControl:true,
+          });
+
+
+});
+
+
     $(document).ready(function(){
         $('.footer_arrow').click(function(){
           $("footer").toggleClass("footer_close");
@@ -16,21 +37,7 @@ each_bar_width = $(this).attr('aria-valuenow');
 $(this).width(each_bar_width + '%');
 });
 
-          var mySwiper = new Swiper('.swiper-month', {
-            speed: 400,
-            loop: true,
-            slidesPerView:'auto',
-            mousewheelControl:true
-          });
-
-          var swiper = new Swiper('.swiper-day', {
-            slidesPerView: 7,
-            spaceBetween: 10,
-            loop: true,
-            centeredSlides: true,
-          });
-
-
+        
       });
 
 
@@ -46,3 +53,4 @@ $(this).width(each_bar_width + '%');
   };
   
 });
+
