@@ -1,0 +1,288 @@
+[class^="fr-"], [class*=" fr-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'FieldRepo' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fr-add_customer:before {
+  content: "\e900";
+}
+.fr-appointment_listing:before {
+  content: "\e901";
+}
+.fr-attachment:before {
+  content: "\e902";
+}
+.fr-bwd_backward:before {
+  content: "\e903";
+}
+.fr-calendar:before {
+  content: "\e904";
+}
+.fr-campaigns:before {
+  content: "\e906";
+}
+.fr-campaigns_input:before {
+  content: "\e905";
+}
+.fr-cancel_appointment:before {
+  content: "\e907";
+}
+.fr-cancelled_appointment:before {
+  content: "\e908";
+}
+.fr-chemist:before {
+  content: "\e909";
+}
+.fr-collapse:before {
+  content: "\e90a";
+}
+.fr-completed_appointment_save:before {
+  content: "\e90b";
+}
+.fr-current_location:before {
+  content: "\e90c";
+}
+.fr-customer_username:before {
+  content: "\e90d";
+}
+.fr-customers_rm:before {
+  content: "\e90e";
+}
+.fr-date_frequency:before {
+  content: "\e90f";
+}
+.fr-distance:before {
+  content: "\e910";
+}
+.fr-doctor:before {
+  content: "\e911";
+}
+.fr-duration:before {
+  content: "\e912";
+}
+.fr-e-learning:before {
+  content: "\e913";
+}
+.fr-end_flag:before {
+  content: "\e914";
+}
+.fr-expand:before {
+  content: "\e915";
+}
+.fr-expense:before {
+  content: "\e916";
+}
+.fr-favorite:before {
+  content: "\e917";
+}
+.fr-filter:before {
+  content: "\e918";
+}
+.fr-fwd_forward:before {
+  content: "\e919";
+}
+.fr-gifts:before {
+  content: "\e91a";
+}
+.fr-history:before {
+  content: "\e91b";
+}
+.fr-home:before {
+  content: "\e91c";
+}
+.fr-hospital:before {
+  content: "\e91d";
+}
+.fr-hq:before {
+  content: "\e91e";
+}
+.fr-imp_appointment:before {
+  content: "\e91f";
+}
+.fr-information:before {
+  content: "\e920";
+}
+.fr-institues:before {
+  content: "\e921";
+}
+.fr-inventory:before {
+  content: "\e922";
+}
+.fr-jointwork:before {
+  content: "\e923";
+}
+.fr-last_visit:before {
+  content: "\e924";
+}
+.fr-left_arrow:before {
+  content: "\e925";
+}
+.fr-library:before {
+  content: "\e926";
+}
+.fr-likes:before {
+  content: "\e927";
+}
+.fr-list_of_files:before {
+  content: "\e928";
+}
+.fr-location:before {
+  content: "\e929";
+}
+.fr-login:before {
+  content: "\e92a";
+}
+.fr-meeting:before {
+  content: "\e92b";
+}
+.fr-message:before {
+  content: "\e92c";
+}
+.fr-minus:before {
+  content: "\e92d";
+}
+.fr-more:before {
+  content: "\e92e";
+}
+.fr-newsfeed:before {
+  content: "\e92f";
+}
+.fr-no_of_visit:before {
+  content: "\e930";
+}
+.fr-note:before {
+  content: "\e931";
+}
+.fr-notification:before {
+  content: "\e932";
+}
+.fr-offline_download:before {
+  content: "\e933";
+}
+.fr-orders:before {
+  content: "\e934";
+}
+.fr-over_night:before {
+  content: "\e935";
+}
+.fr-passowrd_lock:before {
+  content: "\e936";
+}
+.fr-pause:before {
+  content: "\e937";
+}
+.fr-phone_call:before {
+  content: "\e938";
+}
+.fr-play:before {
+  content: "\e939";
+}
+.fr-playlist:before {
+  content: "\e93a";
+}
+.fr-plus:before {
+  content: "\e93b";
+}
+.fr-profile_awards:before {
+  content: "\e93c";
+}
+.fr-quantity:before {
+  content: "\e93d";
+}
+.fr-re_scheduled_appointment:before {
+  content: "\e93e";
+}
+.fr-reports_forms:before {
+  content: "\e93f";
+}
+.fr-right_arrow:before {
+  content: "\e940";
+}
+.fr-rm:before {
+  content: "\e941";
+}
+.fr-route:before {
+  content: "\e942";
+}
+.fr-search:before {
+  content: "\e943";
+}
+.fr-share:before {
+  content: "\e944";
+}
+.fr-signature:before {
+  content: "\e945";
+}
+.fr-sort:before {
+  content: "\e946";
+}
+.fr-star_rating:before {
+  content: "\e947";
+}
+.fr-start_appointment:before {
+  content: "\e948";
+}
+.fr-start_end_trip:before {
+  content: "\e949";
+}
+.fr-start_flag:before {
+  content: "\e94a";
+}
+.fr-status_yet_to_start:before {
+  content: "\e94b";
+}
+.fr-stop:before {
+  content: "\e94c";
+}
+.fr-summary:before {
+  content: "\e94d";
+}
+.fr-total_Appointment:before {
+  content: "\e94e";
+}
+.fr-total_audio:before {
+  content: "\e94f";
+}
+.fr-total_doc:before {
+  content: "\e950";
+}
+.fr-total_excel_lxs:before {
+  content: "\e951";
+}
+.fr-total_inventory:before {
+  content: "\e952";
+}
+.fr-total_pdf:before {
+  content: "\e953";
+}
+.fr-total_ppt:before {
+  content: "\e954";
+}
+.fr-total_sales:before {
+  content: "\e955";
+}
+.fr-total_video:before {
+  content: "\e956";
+}
+.fr-video_call:before {
+  content: "\e957";
+}
+.fr-view:before {
+  content: "\e959";
+}
+.fr-view_dashboard:before {
+  content: "\e958";
+}
+.fr-wifi:before {
+  content: "\e95a";
+}
