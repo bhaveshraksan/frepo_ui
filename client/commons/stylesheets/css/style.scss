@@ -263,11 +263,13 @@ footer{
   -webkit-transition: all .5s;
     -moz-transition: all .5s;
     transition: all .5s;
+    z-index: 2;
   &.footer_close{
     height: 24px !important;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     transition: all .5s;
+    z-index: 2;
   }
 
 ul{
@@ -351,6 +353,7 @@ ul{
 }
 
 
+  
 .left_curve { 
   perspective: 600px;
 
@@ -371,8 +374,13 @@ ul{
     padding:0px;
     margin:0px;
     list-style: none;
-    //max-height: 350px;
-    //overflow: auto;
+    //max-height: 360px;  
+   // overflow-y: auto;
+   
+    // &:hover{
+    //   overflow: auto;
+    // }
+   
     li{
       width: 49%;
       display: inline-block;
@@ -392,7 +400,9 @@ ul{
       }
     }
   }
+
 }
+
 
 .right_curve {
   perspective: 600px;
@@ -412,11 +422,11 @@ ul{
       list-style: none;
       padding:0px;
       margin: 0px;
-      //max-height: 350px;
-    //overflow: hidden;
-    &:hover{
-      //overflow: auto;
-    }
+      //max-height: 360px;
+     // overflow-y: auto;
+    // &:hover{
+    //   overflow: auto;
+    // }
       li{
         display: inline-block;
         width: 49%;
@@ -532,6 +542,70 @@ ul{
     }
   }
   }
+  .focusMargin{
+    padding-bottom:4px;
+    padding-right:12px;
+  }
+  .focusMargin:after {
+  content : "";
+  position: absolute;
+  right    : 0;
+  z-index: 1;
+  top  : 8px;
+  width  : 2px;
+  height   : 50%;  /* or 100px */
+  background: #fff ;
+  margin-right:6px;
+  
+}
+
+.offline_list{
+  ul{
+
+list-style: none;
+margin: 0px;
+li{
+  //display:inline;
+  img{
+    width: 60%;
+  }
+}
+  }
+ 
+}
+
+
+.offlineMargin{
+  padding-bottom:4px;
+ span{
+   font-size:22px;
+   @include themify(){
+    color: getThemifyVariable('yellow-color');
+  }
+   
+ }
+ label{
+   font-weight:normal;
+   @include themify(){
+    color: getThemifyVariable('yellow-color');
+  }
+ }
+ 
+  
+}
+.offlineMargin:before {
+content : "";
+position: absolute;
+left    : 0;
+z-index: 1;
+top  : 8px;
+width  : 2px;
+height   : 50%;  /* or 100px */
+background: #fff ;
+margin-left:6px;
+
+
+}
 }
 //////////////////////////////////////////////////////////////////////////////
 .tooltip{ 
@@ -994,6 +1068,12 @@ span.progress-value {
 .checkbox-switch input.input-checkbox:checked + .checkbox-animate .checkbox-off {
   display: none;
   opacity: 0;
+}::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #ff0000;
+ 
 }
 
 .checkbox-switch input.input-checkbox:checked + .checkbox-animate .checkbox-on {
@@ -1020,6 +1100,10 @@ span.progress-value {
 {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  // background-color: #000;
+  // &:hover{
   background-color: #ff0000;
+ // }
+ 
 }
 /* Scrollbar css Ends */

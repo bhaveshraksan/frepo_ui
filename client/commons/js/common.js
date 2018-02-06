@@ -9,12 +9,20 @@
             centeredSlides: true,
           });
 
+          var swiper = new Swiper('.offline_list', {
+            slidesPerView: 4,
+            spaceBetween: 0,
+            loop: true,
+            centeredSlides: true,
+          });
+
             var mySwiper = new Swiper('.swiper-month', {
             speed: 400,
             loop: true,
             slidesPerView:'auto',
             mousewheelControl:true,
           });
+         
 
 
 });
