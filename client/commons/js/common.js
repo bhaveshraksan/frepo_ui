@@ -3,10 +3,13 @@
   Template.frLanding.onRendered(function () {
 
          var swiper = new Swiper('.swiper-day', {
-            slidesPerView: 7,
-            spaceBetween: 10,
-            loop: true,
-            centeredSlides: true,
+                
+          slidesPerView: 8,
+          spaceBetween: 0,
+          loop: true,
+          centeredSlides: true,
+          nextButton: '.swiper-button-next-day',
+          prevButton: '.swiper-button-prev-day',
           });
 
           var swiper = new Swiper('.offline_list', {
@@ -17,9 +20,11 @@
           });
 
             var mySwiper = new Swiper('.swiper-month', {
-            speed: 400,
-            loop: true,
-            mousewheelControl:true,
+              speed: 400,
+              loop: true,
+              mousewheelControl:true,
+              nextButton: '.swiper-button-next',
+               prevButton: '.swiper-button-prev',
           });
 
            

@@ -850,6 +850,46 @@ span.progress-value {
 .swiper-day{
   padding:5px 0px;
   width: 50%;
+  margin:0px auto 10px auto;
+  .swiper-button-prev-day{
+    background-image:none;
+    background-color:black;
+    left: 0px;
+    right: auto;
+    position: absolute;
+    top: 68%;
+    width: 20px;
+    height: 44px;
+    margin-top: -22px;
+    z-index: 10;
+  padding-right:0px;
+    -moz-background-size: 27px 44px;
+    -webkit-background-size: 27px 44px;
+    background-size: 27px 44px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-color:none;
+    
+  }
+  .swiper-button-next-day{
+    background-image:none;
+    background-color:black;
+    right: 0px;
+    left: auto;
+    position: absolute;
+    top: 68%;
+    width: 20px;
+    height: 44px;
+    margin-top: -22px;
+    z-index: 10;
+    -moz-background-size: 27px 44px;
+    -webkit-background-size: 27px 44px;
+    background-size: 27px 44px;
+    background-position: center;
+    background-repeat: no-repeat;
+   margin-left:0px;
+    
+  }
   .swiper-slide-active{
     .date_swipe{
       @include themify(){
