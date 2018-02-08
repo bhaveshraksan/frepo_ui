@@ -76,6 +76,16 @@ body {
 	}
   font-family: 'Roboto', sans-serif;
 }
+
+.app_fieldrepo{
+
+  @include themify(){
+    background-color: getThemifyVariable('black-color') !important;
+    color: getThemifyVariable('second-color');
+  }
+  font-family: 'Roboto', sans-serif;
+  height:100%;
+} 
 form {
   margin: 0 0 30px 0;
 }
@@ -144,7 +154,7 @@ header{
     background:getThemifyVariable('black-color');
     border-bottom:getThemifyVariable('border-sm') solid getThemifyVariable('red-color');
   }
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   .right{
     /* margin-top: 20px; */
   }
@@ -277,6 +287,7 @@ ul{
   padding:10px 0px;
   text-align: center;
    border-radius:100px 100px 0 0;
+   display:flex;
   @include themify(){
     border:getThemifyVariable('fr-appointment_listing') solid getThemifyVariable('green-color');
     color: getThemifyVariable('white-color');
@@ -286,6 +297,7 @@ ul{
     padding:0px 5px;
         min-width: 80px;
     vertical-align: top;
+    flex:auto;
     a{
       text-align: center;
       @include themify(){
@@ -970,34 +982,92 @@ span.progress-value {
 .nopaddingright{padding-right:0px !important}
 
 
+//breadcrumb//
+.bread_crumb{
+  margin-bottom:8px;
+  ul{
+    margin:0px;list-style:none;padding: 0 10px;
+    li{
+      display:inline-block;
+      a{
+        @include themify(){
+          color:getThemifyVariable('white-color');
+        }
+      }
+      &:after{
+        content: " - ";
+      }
+      &:last-child{
+        a{
+          @include themify(){
+          color:getThemifyVariable('blue-color');
+        }
+        }
+        &:after{
+          display:none;
+        }
+      }
+    }
+  }
+}
+
+
+/* Icon List */
+.icon_list{ 
+    padding:4px;
+    list-style:none;
+    display:flex;
+    li{
+      text-align:center;
+      margin:0 5px;
+      a{
+        display:inline-block;
+        border-radius:10px;
+      padding:10px;
+      @include themify(){
+        border:getThemifyVariable('yellow-color') 1px solid;
+        color:getThemifyVariable('white-color');
+        span{
+          padding-right:10px;
+        }
+      }
+        .fr{
+          float:left;
+          @include themify(){
+            color:getThemifyVariable('yellow-color');
+         }
+        }
+            
+        label{
+          border-left:2px solid #fff;
+           padding-left:2px;
+           font-weight:normal;
+           margin:0px;
+           line-height:14px;
+           span{
+            padding-left:0px;
+            margin-left:0px;
+            float:left;
+            font-size:12px;
+              @include themify(){
+                color:getThemifyVariable('yellow-color');
+             }
+           }
+        }
+      }
+    }
+}
+
+
+
 
 /* Checkbox switch */
 
 .checkbox-switch {
-    cursor: pointer;
-    display: inline-block;
-    overflow: hidden;
-    position: relative;
-    text-align: left;
-    width: 80px;
-    height: 30px;
-    -webkit-border-radius: 30px;
-    border-radius: 30px;
-    line-height: 1.2;
-    font-size: 14px;
-}
+    cursor: pointer; display: inline-block; overflow: hidden; position: relative; text-align: left; width: 80px; height: 30px; -webkit-border-radius: 30px; border-radius: 30px; line-height: 1.2; font-size: 14px; }
 
 .checkbox-switch input.input-checkbox {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 80px;
-  height: 30px;
-  padding: 0;
-  margin: 0;
-  opacity: 0;
-  z-index: 2;
-  cursor: pointer;
+  position: absolute; left: 0; top: 0; width: 80px; height: 30px; padding: 0; margin: 0; opacity: 0; z-index: 2; cursor: pointer;
 }
 
 .checkbox-switch .checkbox-animate {
@@ -1107,3 +1177,7 @@ span.progress-value {
  
 }
 /* Scrollbar css Ends */
+
+.md_scroll{
+  height:400px;
+}
