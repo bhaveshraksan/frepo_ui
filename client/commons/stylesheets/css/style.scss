@@ -68,13 +68,14 @@ sass --watch path/to/sass1:path/to/css1 path/to/sass2:path/to/css2 path/to/sass3
 //
 // Styles
 //
-
+html {height:100%;}
 body {
 	@include themify(){
 		background-color: getThemifyVariable('black-color') !important;
 		color: getThemifyVariable('second-color');
 	}
   font-family: 'Roboto', sans-serif;
+  height:100%;
 }
 
 .app_fieldrepo{
@@ -154,7 +155,7 @@ header{
     background:getThemifyVariable('black-color');
     border-bottom:getThemifyVariable('border-sm') solid getThemifyVariable('red-color');
   }
-  margin-bottom: 8px;
+  /*margin-bottom: 8px;*/
   .right{
     /* margin-top: 20px; */
   }
@@ -265,7 +266,7 @@ header{
   }
 }
 
-footer{
+footer{  
   bottom:0;
   position:fixed; 
   width: 100%;
@@ -392,13 +393,14 @@ ul{
     // &:hover{
     //   overflow: auto;
     // }
-   
+    .mCSB_container {margin:0px;}
     li{
-      width: 49%;
+      width: 50%;
       display: inline-block;
       text-align: center;
+      float:left;
       @include themify(){
-        border-bottom:getThemifyVariable('border-sm') solid getThemifyVariable('gray-color');
+        border-bottom:getThemifyVariable('border-xxs') solid getThemifyVariable('gray-color');
       }
       &:nth-last-child(1) {
           border-bottom:0px;
@@ -410,6 +412,8 @@ ul{
         display: block;
         font-size: 30px;
       }
+      p {display:block; font-size:12px; min-height:34px;}
+
     }
   }
 
@@ -434,6 +438,7 @@ ul{
       list-style: none;
       padding:0px;
       margin: 0px;
+      text-align: center;
       //max-height: 360px;
      // overflow-y: auto;
     // &:hover{
@@ -441,12 +446,12 @@ ul{
     // }
       li{
         display: inline-block;
-        width: 49%;
+        width: 48%;
         position:relative;
         text-align: center;
         margin-bottom: 20px;
         p{
-          font-size: 14px;
+          font-size: 12px;
         }
         .xs{
           position:absolute;
@@ -474,7 +479,7 @@ ul{
   }
   h1{
     @include themify(){
-      border-bottom:getThemifyVariable('border-md') solid getThemifyVariable('green-color');
+      border-bottom:getThemifyVariable('border-sm') solid getThemifyVariable('green-color');
     }
    font-size: 14px;
     display: inline-block;
@@ -721,7 +726,7 @@ span.progress-value {
     width: 40px;
     height: 40px;
     text-align: center;
-    line-height: 40px;
+    line-height:34px;
   }
   &.border-red{
     @include themify(){
@@ -731,6 +736,11 @@ span.progress-value {
   &.border-yellow{
     @include themify(){
       border:getThemifyVariable('border-sm') solid getThemifyVariable('yellow-color');
+    }
+  }
+  &.border-green{
+    @include themify(){
+      border:getThemifyVariable('border-sm') solid getThemifyVariable('green-color');
     }
   }
   &.fill-white{
@@ -848,7 +858,7 @@ span.progress-value {
   }
 }
 .swiper-day{
-  padding:5px 0px;
+  padding:5px 0px 5px 5px;
   width: 50%;
   margin:0px auto 10px auto;
   .swiper-button-prev-day{
@@ -1221,3 +1231,5 @@ span.progress-value {
 .md_scroll{
   height:400px;
 }
+
+.fr_main_content {display:block;height:calc(100% - 55px);padding-top:8px;}
