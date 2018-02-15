@@ -857,10 +857,10 @@ span.progress-value {
     left: 0px;
     right: auto;
     position: absolute;
-    top: 68%;
+    top: 8%;
     width: 20px;
     height: 44px;
-    margin-top: -22px;
+ 
     z-index: 10;
   padding-right:0px;
     -moz-background-size: 27px 44px;
@@ -1069,6 +1069,10 @@ span.progress-value {
         color:getThemifyVariable('white-color');
         span{
           padding-right:10px;
+          input{
+            background: getThemifyVariable('black-color');
+            border:getThemifyVariable('yellow-color') 1px solid;
+          }
         }
       }
         .fr{
@@ -1077,10 +1081,13 @@ span.progress-value {
             color:getThemifyVariable('yellow-color');
          }
         }
-            
+        span{
+          margin:4 0px;
+          line-height: 14px;
+        }    
         label{
           border-left:2px solid #fff;
-           padding-left:2px;
+           padding-left:9px;
            font-weight:normal;
            margin:0px;
            line-height:14px;
@@ -1097,6 +1104,121 @@ span.progress-value {
       }
     }
 }
+
+.frAppointmentStyle{
+  padding:10px;
+  padding-right:0px;
+  margin:20px;
+  @include themify(){
+    border: 1px getThemifyVariable('yellow-color') solid;
+    }
+  .customCheckbox{
+    background-color: #000;
+    @include themify(){
+    border: 1pxget div class height cssr getThemifyVariable('yellow-color') solid;
+    }
+  }
+    a 
+    { 
+     padding:2px;
+     
+     img
+     {
+      width:30%;
+      height:100px;
+      border-radius: 50%;
+      padding:2px;
+      @include themify(){
+        border: getThemifyVariable('border-xs') getThemifyVariable('yellow-color') solid;
+      
+         }  
+      }  
+    }
+    ul{
+      list-style: none;   
+      display:inline-block;
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2;
+      -webkit-column-gap: 5px;
+      column-gap: 5px;
+      -moz-column-gap: 5px;
+   
+      li{
+        a{
+          span{
+        @include themify(){
+          color:getThemifyVariable('yellow-color');
+           }
+        }
+           label{
+            @include themify(){
+              color:getThemifyVariable('white-color');
+              font-size: 14px;
+           }
+           font-weight: 100;
+          }
+      }
+    }  
+  }
+  .timeStyle{
+    span{
+      @include themify(){
+      font-size:getThemifyVariable('font-md');
+      color:getThemifyVariable('yellow-color');
+      }
+      margin:0 40px;
+      padding:10 0px;
+      
+    }
+    label{
+      @include themify(){
+        font-size:getThemifyVariable('font-lg');
+        color:getThemifyVariable('white-color');
+        }
+        font-weight:200;
+    }
+    .summaryStyle{
+      width:80%;
+      line-height: 26px;
+      background-color: #dfdfdf;
+      margin:2px;
+      span{
+        @include themify(){
+          color:getThemifyVariable('black-color');
+          }        
+          font-size:18px;
+         padding-left:0px;
+         i{
+           padding:2px;
+         }
+      }
+     
+    }
+  }
+  // .side_arrow{
+  //   padding-top:0px;
+  //   margin:0px;
+  //   float:right;
+  //   height:100px;
+  //   width:15px;
+  //   position:relative;
+  //   top:0px;
+  //   right:0px;
+  //   bottom: 0;
+  //   cursor: pointer; /* Add a pointer on hover */
+  //   border-bottom-left-radius: 50%;
+  //   border-top-left-radius: 50%;
+  //   @include themify(){
+  //     background-color: getThemifyVariable('yellow-color');
+  //     color:getThemifyVariable('black-color');
+  //     }
+  // }
+  // span{
+  //     top:50px;
+  // }
+ }
+
 
 
 
@@ -1157,7 +1279,9 @@ span.progress-value {
 .checkbox-switch .checkbox-off,
 .checkbox-switch .checkbox-on {
   float: left;
-  color: #fff;
+  color: #fff;padding:0px;
+  margin:0px;
+  right:0;
   padding-top: 8px;
    -webkit-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s;
