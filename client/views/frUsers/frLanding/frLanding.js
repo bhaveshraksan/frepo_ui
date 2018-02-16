@@ -1,5 +1,5 @@
 Template.frLanding.onRendered(function () {
-
+           
          var swiper = new Swiper('.swiper-day', {
                 
           slidesPerView: 8,
@@ -28,25 +28,46 @@ Template.frLanding.onRendered(function () {
            
 
             $(".md_scroll").mCustomScrollbar({
-              autoHideScrollbar:true,
-              theme:"dark"
-            });
-         
+          autoHideScrollbar:true,
+          theme:"dark"
+        });
+            $('#datePicker')
+        .datepicker({
+            format: 'mm/dd/yyyy'
+        })
+        .on('changeDate', function(e) {
+            // Revalidate the date field
+            $('#eventForm').formValidation('revalidateField', 'date');
+        });
+
+    $('#eventForm').formValidation({
+        framework: 'bootstrap',
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            name: {
+                validators: {
+                    notEmpty: {
+                        message: 'The name is required'
+                    }
+                }
+            },
+            date: {
+                validators: {
+                    notEmpty: {
+                        message: 'The date is required'
+                    },
+                    date: {
+                        format: 'MM/DD/YYYY',
+                        message: 'The date is not a valid'
+                    }
+                }
+            }
+        }
+    });
 });
 
-
-
-
-
-//       document.addEventListener('DOMContentLoaded', function(){
-//   let body = document.querySelector('body');
-//   document.querySelector('.themeselect').addEventListener('change', handleThemeSelect);
-//   function handleThemeSelect(event) {
-//     event.preventDefault();
-    
-//     // change body class
-//     body.className = event.target.value;
-//   };
-  
-// });
 

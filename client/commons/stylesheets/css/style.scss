@@ -150,7 +150,10 @@ h1{
 	font-size:remy(64,4);
 }
 
+/*header Starts*/
+
 header{
+  display:block; position:fixed;top:0px; z-index: 99999; width:100%;
   @include themify(){
     background:getThemifyVariable('black-color');
     border-bottom:getThemifyVariable('border-sm') solid getThemifyVariable('red-color');
@@ -159,6 +162,15 @@ header{
   .right{
     /* margin-top: 20px; */
   }
+
+  .fr_logo {display:inline-block; float:left; width:auto; height: 52px; padding:8px;
+    @include themify(){
+      background:getThemifyVariable('yellow-color');
+    }
+    img {display:block; width:auto; height:100%;}
+  }
+  .fr_primary_logo {}
+  .fr_secondary_logo {}
 }
 
 
@@ -187,7 +199,7 @@ header{
   }
   input[type=search]:focus {
     outline:0;
-    width: 130px;
+    width: 80px;
     @include themify(){
       border-bottom:solid getThemifyVariable('border-sm') getThemifyVariable('yellow-color');
     }
@@ -267,6 +279,7 @@ header{
 }
 
 footer{  
+  display:none;
   bottom:0;
   position:fixed; 
   width: 100%;
@@ -351,7 +364,7 @@ ul{
 }
 .date_time{
   text-align: center;
-  margin-left: 19%;
+  display:block;
   @include themify(){
     color: getThemifyVariable('white-color');
   }
@@ -485,7 +498,7 @@ ul{
     display: inline-block;
     width: 100%;
     margin: 0px;
-    padding:  6px;
+    padding:6px 12px;
     b{
       @include themify(){
         color: getThemifyVariable('yellow-color');
@@ -494,11 +507,12 @@ ul{
     }
   }
   iframe{
-        border: 0;
-    margin: 0px 0 0 4px;
+    border: 0;
+    margin: 0px auto;
     border-radius: 5px;
     width: 98%;
     height: 150px;
+    display:block;
   }
   @include themify(){
     border:getThemifyVariable('border-md') solid getThemifyVariable('green-color');
@@ -762,8 +776,8 @@ span.progress-value {
   position: relative;
   height: 25px;
   @include themify(){
-    border:getThemifyVariable('border-xs') solid getThemifyVariable('yellow-color');
-    color: getThemifyVariable('yellow-color');
+    border:getThemifyVariable('border-xs') solid getThemifyVariable('gray-color');
+    color: getThemifyVariable('gray-color');
   }
   float: left;
   margin: 0px;
@@ -787,7 +801,7 @@ span.progress-value {
         width: 2px;
         height: 8px;
         @include themify(){
-    background:getThemifyVariable('yellow-color');
+    background:getThemifyVariable('gray-color');
   }
         z-index:2;
         -moz-border-radius:2px;
@@ -802,7 +816,7 @@ span.progress-value {
   width: 2px;
   height: 8px;
   @include themify(){
-    background:getThemifyVariable('yellow-color');
+    background:getThemifyVariable('gray-color');
   }
   z-index:2;
   -moz-border-radius:2px;
@@ -843,7 +857,7 @@ span.progress-value {
 
 
 .swiper-month{
-  width: 40%;
+  width:190px;
   text-align: center;
   margin:0px auto 10px auto;
   .fa{
@@ -903,14 +917,14 @@ span.progress-value {
   .swiper-slide-active{
     .date_swipe{
       @include themify(){
-        border:getThemifyVariable('border-xs') solid getThemifyVariable('white-color');
+        border-color:getThemifyVariable('white-color');
         color: getThemifyVariable('white-color');
         background:getThemifyVariable('red-color');
       }
 
       em{  
        @include themify(){
-        border:getThemifyVariable('border-sm') solid getThemifyVariable('white-color');
+        border-color:getThemifyVariable('white-color');
       }
     }
 
@@ -922,6 +936,30 @@ span.progress-value {
       &:before, &:after{
         @include themify(){
           background:getThemifyVariable('white-color');
+        }
+      }
+    }
+  }
+   .date_color_yellow{
+    .date_swipe{
+      @include themify(){
+        border-color:getThemifyVariable('yellow-color'); 
+        color: getThemifyVariable('yellow-color');
+      }
+      em{  
+       @include themify(){
+        border-color:getThemifyVariable('yellow-color');
+      }
+    }
+
+      b{
+        @include themify(){
+          background:getThemifyVariable('yellow-color');
+        }
+      }
+      &:before, &:after{
+        @include themify(){
+          background:getThemifyVariable('yellow-color');
         }
       }
     }
@@ -1356,4 +1394,4 @@ span.progress-value {
   height:400px;
 }
 
-.fr_main_content {display:block;height:calc(100% - 55px);padding-top:8px;}
+.fr_body_content {display:block; padding-top:60px;}
