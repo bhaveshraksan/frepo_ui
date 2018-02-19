@@ -1,5 +1,5 @@
 {
-  "name": "fieldrepo_app",
+  "name": "fieldrepo_ui",
   "private": true,
   "scripts": {
     "start": "meteor run"
