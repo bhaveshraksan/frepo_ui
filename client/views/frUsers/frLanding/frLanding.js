@@ -11,7 +11,7 @@ Template.frLanding.onRendered(function () {
           });
 
           var swiper = new Swiper('.offline_list', {
-            slidesPerView: 4,
+            slidesPerView: 2,
             spaceBetween: 0,
             loop: true,
             centeredSlides: true,
