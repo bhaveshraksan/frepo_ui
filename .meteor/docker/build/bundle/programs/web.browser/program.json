@@ -1,0 +1,257 @@
+{
+  "format": "web-program-pre1",
+  "manifest": [
+    {
+      "path": "43ec46080e50d6c7dff0008baded7c71990dbd0a.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/43ec46080e50d6c7dff0008baded7c71990dbd0a.js?meteor_js_resource=true",
+      "size": 744804,
+      "hash": "43ec46080e50d6c7dff0008baded7c71990dbd0a"
+    },
+    {
+      "path": "43ec46080e50d6c7dff0008baded7c71990dbd0a.stats.json",
+      "where": "client",
+      "type": "json",
+      "cacheable": true,
+      "url": "/43ec46080e50d6c7dff0008baded7c71990dbd0a.stats.json?meteor_js_resource=true",
+      "size": 23560,
+      "hash": "0d65a14f8efbbe84724d141a5f4a63308f0b134c"
+    },
+    {
+      "path": "ca6f96fe34be06acc4d55333e850afbcffce024e.css",
+      "where": "client",
+      "type": "css",
+      "cacheable": true,
+      "url": "/ca6f96fe34be06acc4d55333e850afbcffce024e.css?meteor_css_resource=true",
+      "size": 223473,
+      "hash": "ca6f96fe34be06acc4d55333e850afbcffce024e"
+    },
+    {
+      "path": "9c973a7ad87394a4546c9e4147d6d5c157c87380.css",
+      "where": "client",
+      "type": "css",
+      "cacheable": true,
+      "url": "/9c973a7ad87394a4546c9e4147d6d5c157c87380.css?meteor_css_resource=true",
+      "size": 14168,
+      "hash": "9c973a7ad87394a4546c9e4147d6d5c157c87380"
+    },
+    {
+      "path": "packages/twbs_bootstrap/dist/fonts/glyphicons-halflings-regular.eot",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/twbs_bootstrap/dist/fonts/glyphicons-halflings-regular.eot",
+      "size": 20127,
+      "hash": "30407a683746065f032a7a61ff50f24b008cc8b3"
+    },
+    {
+      "path": "packages/twbs_bootstrap/dist/fonts/glyphicons-halflings-regular.svg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/twbs_bootstrap/dist/fonts/glyphicons-halflings-regular.svg",
+      "size": 108738,
+      "hash": "79a351a269ccbdab7745962bfd40cf86c2b9bc95"
+    },
+    {
+      "path": "packages/twbs_bootstrap/dist/fonts/glyphicons-halflings-regular.ttf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/twbs_bootstrap/dist/fonts/glyphicons-halflings-regular.ttf",
+      "size": 45404,
+      "hash": "3a900bcba1505bbef235f1b497513a1bd894f434"
+    },
+    {
+      "path": "packages/twbs_bootstrap/dist/fonts/glyphicons-halflings-regular.woff",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/twbs_bootstrap/dist/fonts/glyphicons-halflings-regular.woff",
+      "size": 23424,
+      "hash": "434169edd7cbbb36bb43e25d78c7ceb26beac9b4"
+    },
+    {
+      "path": "packages/twbs_bootstrap/dist/fonts/glyphicons-halflings-regular.woff2",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/twbs_bootstrap/dist/fonts/glyphicons-halflings-regular.woff2",
+      "size": 18028,
+      "hash": "b3253b854b958bb4f2e4c2dae5ff45c8237dc1d6"
+    },
+    {
+      "path": "packages/fortawesome_fontawesome/upstream/fonts/fontawesome-webfont.eot",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/fortawesome_fontawesome/upstream/fonts/fontawesome-webfont.eot",
+      "size": 165742,
+      "hash": "5e3a1a9b72af1d842682f7e0a5c305922c583e3f"
+    },
+    {
+      "path": "packages/fortawesome_fontawesome/upstream/fonts/fontawesome-webfont.svg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/fortawesome_fontawesome/upstream/fonts/fontawesome-webfont.svg",
+      "size": 444379,
+      "hash": "2958ef6f1890fda3f47468dedc70c2e1b2dd9511"
+    },
+    {
+      "path": "packages/fortawesome_fontawesome/upstream/fonts/fontawesome-webfont.ttf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/fortawesome_fontawesome/upstream/fonts/fontawesome-webfont.ttf",
+      "size": 165548,
+      "hash": "dbaed61bd8235d7e12522b21ce66fb90a4f9740d"
+    },
+    {
+      "path": "packages/fortawesome_fontawesome/upstream/fonts/fontawesome-webfont.woff",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/fortawesome_fontawesome/upstream/fonts/fontawesome-webfont.woff",
+      "size": 98024,
+      "hash": "951644ff8c02065fd58f609d142e45daaaa5370f"
+    },
+    {
+      "path": "packages/fortawesome_fontawesome/upstream/fonts/fontawesome-webfont.woff2",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/fortawesome_fontawesome/upstream/fonts/fontawesome-webfont.woff2",
+      "size": 77160,
+      "hash": "a34ffd10b2a49d55d6247e351520ffdf556e0bb1"
+    },
+    {
+      "path": "packages/fortawesome_fontawesome/upstream/fonts/FontAwesome.otf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/fortawesome_fontawesome/upstream/fonts/FontAwesome.otf",
+      "size": 134808,
+      "hash": "cd12480a6626f5faf89ddd7ebb00edf64059498d"
+    },
+    {
+      "path": "app/fonts/FieldRepo.eot",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/fonts/FieldRepo.eot",
+      "size": 45812,
+      "hash": "cb7d1a566cc98d43a748c1bd67b79ad2a522fb93"
+    },
+    {
+      "path": "app/fonts/FieldRepo.svg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/fonts/FieldRepo.svg",
+      "size": 197431,
+      "hash": "096a5ffbb5c78f98b362da3aa744ef34721945c3"
+    },
+    {
+      "path": "app/fonts/FieldRepo.ttf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/fonts/FieldRepo.ttf",
+      "size": 45640,
+      "hash": "786eee509505056d5771720db3875251e9a14921"
+    },
+    {
+      "path": "app/fonts/FieldRepo.woff",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/fonts/FieldRepo.woff",
+      "size": 45716,
+      "hash": "6386264c53f04424829916bfb2a265febac903ce"
+    },
+    {
+      "path": "app/fonts/FieldRepo.woff2",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/fonts/FieldRepo.woff2",
+      "size": 21956,
+      "hash": "a23f20c02abb3930e352cc5c88c0275e5f736939"
+    },
+    {
+      "path": "app/fonts/tickingtimebombbb_1-webfont.woff",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/fonts/tickingtimebombbb_1-webfont.woff",
+      "size": 10808,
+      "hash": "7b7c761705e9519612e4bd4e8b8ff7afcbe25a9b"
+    },
+    {
+      "path": "app/fonts/tickingtimebombbb_1-webfont.woff2",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/fonts/tickingtimebombbb_1-webfont.woff2",
+      "size": 8372,
+      "hash": "c41e4183736d8288dc94bc8116c84472f6ae7d55"
+    },
+    {
+      "path": "app/images/dummy-image1.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/dummy-image1.png",
+      "size": 6252,
+      "hash": "0b49f941ca4ee1f66e5c891e2069f2a375df901d"
+    },
+    {
+      "path": "app/images/dummy-image2.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/dummy-image2.jpg",
+      "size": 7313,
+      "hash": "ae63c3e14b504bcb170d3a3dc25fb2051083a353"
+    },
+    {
+      "path": "app/images/logo-fieldrepo.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/logo-fieldrepo.png",
+      "size": 12874,
+      "hash": "c850f0da554885b5e21168dcf66856bc406d3bb6"
+    },
+    {
+      "path": "app/images/logo.jpeg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/logo.jpeg",
+      "size": 8377,
+      "hash": "1d03580c7499c3903af28f99f28f61574fcf662f"
+    },
+    {
+      "path": "app/images/profile_pic.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/profile_pic.jpg",
+      "size": 21023,
+      "hash": "ff4f823673c9302aa43cd44c85ed8bc2b592f5db"
+    },
+    {
+      "path": "app/images/search.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/search.png",
+      "size": 770,
+      "hash": "9348698024256ca4af549d1cec347cb817707b34"
+    }
+  ]
+}

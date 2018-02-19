@@ -162,15 +162,18 @@ header{
   .right{
     /* margin-top: 20px; */
   }
-
+  .header_date {display:inline-block; position: absolute; top: 0px; left: 0px; right: 0px;z-index:99999; width: 200px; margin: 0 auto;}
   .fr_logo {display:inline-block; float:left; width:auto; height: 52px; padding:8px;
     @include themify(){
       background:getThemifyVariable('yellow-color');
     }
     img {display:block; width:auto; height:100%;}
   }
-  .fr_primary_logo {}
-  .fr_secondary_logo {}
+  .fr_secondary_logo {
+    @include themify(){
+      background:transparent;
+    }
+  }
 }
 
 
@@ -378,7 +381,9 @@ ul{
   }
 }
 
-
+.la_left_block { width:30%;}
+.la_middle_block { width:40%;}
+.la_right_block { width:30%;}
   
 .left_curve { 
   perspective: 600px;
@@ -399,6 +404,7 @@ ul{
   ul{
     padding:0px;
     margin:0px;
+    padding-bottom: 10px;
     list-style: none;
     //max-height: 360px;  
    // overflow-y: auto;
@@ -412,8 +418,9 @@ ul{
       display: inline-block;
       text-align: center;
       float:left;
+      padding:0 10px;
       @include themify(){
-        border-bottom:getThemifyVariable('border-xxs') solid getThemifyVariable('gray-color');
+        border-bottom:getThemifyVariable('border-mxs') solid getThemifyVariable('gray-color');
       }
       &:nth-last-child(1) {
           border-bottom:0px;
@@ -429,7 +436,7 @@ ul{
 
     }
   }
-
+.mCSB_dragger_bar {background-color:red !important; float:right;}
 }
 
 
@@ -452,6 +459,7 @@ ul{
       padding:0px;
       margin: 0px;
       text-align: center;
+      padding-top: 10px; padding-bottom: 10px;
       //max-height: 360px;
      // overflow-y: auto;
     // &:hover{
@@ -463,31 +471,35 @@ ul{
         position:relative;
         text-align: center;
         margin-bottom: 20px;
+        /*&:nth-child(even){padding-right:45px;}*/
         p{
-          font-size: 12px;
+          font-size: 12px; margin-bottom:5px;
         }
-        .xs{
+        .sm{
           position:absolute;
-          right: 20px;
-          top: 30px;
+          top:-5px;
+          right: -25px;
+          line-height:44px;
           @include themify(){
-            color: getThemifyVariable('red-color');
+            color: getThemifyVariable('white-color');
           }
         }
         .md{
-          margin-left: 10px;
           display: inline-block;
           font-size: 17px;
         }
+        .Analytics_block {display:inline-block; position:relative;}
       }
     }
   }
 }
 .middle_curve{
   margin-top: 10px;
-  .border-right-white{
-    @include themify(){
-      border-right:getThemifyVariable('border-sm') solid getThemifyVariable('white-color');
+  .border-right-white{ 
+    &:after{ display:block; content:""; height:calc(100% - 20px); position: absolute; top: 10px; right: 0px;
+     @include themify(){
+        border-right:getThemifyVariable('border-mxs') solid getThemifyVariable('white-color');
+      }
     }
   }
   h1{
@@ -541,16 +553,18 @@ ul{
     margin:0px;
     padding:0px;
     li{
-      display: block;
+      display: inline-block; width:100%;
       b{
         float: left;
-        width: 20%;
+        width: 55px;
         text-align: center;
         font-size: 24px;
       }
       p{
         float: left;
-        width: 80%;
+        width:calc(100% - 55px);
+        margin:0px;
+        font-size: 14px;
       }
     }
   }
@@ -559,23 +573,26 @@ ul{
     margin:0px;
     padding:0px;
     li{
-      display: block;
+      display: inline-block; width:100%;
       span{
         float: left;
-        width: 30%;
+        width: 80px;
         text-align: center;
         font-size: 24px;
       }
       p{
         float: left;
-        width: 70%;
+        width:calc(100% - 80px);
+        font-size: 14px; margin:0px;
       }
     }
   }
   }
+  .ofline_statusbar {display:inline-block; height:49px; width:100%;}
   .focusMargin{
     padding-bottom:4px;
     padding-right:12px;
+    text-align:center;
   }
   .focusMargin:after {
   content : "";
@@ -592,13 +609,13 @@ ul{
 
 .offline_list{
   ul{
-
+text-align: center;
 list-style: none;
 margin: 0px;
 li{
   //display:inline;
   img{
-    width: 60%;
+    width: 50px;
   }
 }
   }
@@ -609,7 +626,7 @@ li{
 .offlineMargin{
   padding-bottom:4px;
  span{
-   font-size:22px;
+   font-size:22px; cursor: pointer;
    @include themify(){
     color: getThemifyVariable('yellow-color');
   }
@@ -617,6 +634,7 @@ li{
  }
  label{
    font-weight:normal;
+   cursor: pointer;
    @include themify(){
     color: getThemifyVariable('yellow-color');
   }
@@ -681,6 +699,7 @@ section{
       }
     }
   }
+
 }
 .progress-bar{
   @include themify(){
@@ -760,6 +779,12 @@ span.progress-value {
   &.fill-white{
     @include themify(){
       background:getThemifyVariable('white-color');
+    }
+  }
+  &.fill-black{
+    @include themify(){
+      background:getThemifyVariable('black-color');
+      color: getThemifyVariable('white-color');
     }
   }
 }
@@ -853,6 +878,9 @@ span.progress-value {
     border-radius: 20px;
     padding: 0px 10px;
   }
+  .progress_rang { 
+    sub { bottom:0px; font-weight:normal; padding-left:2px;font-size: 60%;} 
+  }
 }
 
 
@@ -873,7 +901,7 @@ span.progress-value {
 }
 .swiper-day{
   padding:5px 0px 5px 5px;
-  width: 50%;
+  width: 328px;
   margin:0px auto 10px auto;
   .swiper-button-prev-day{
     background-image:none;
@@ -881,9 +909,9 @@ span.progress-value {
     left: 0px;
     right: auto;
     position: absolute;
-    top: 8%;
+    top: 2px;
     width: 20px;
-    height: 44px;
+    height:30px;
  
     z-index: 10;
   padding-right:0px;
@@ -898,12 +926,12 @@ span.progress-value {
   .swiper-button-next-day{
     background-image:none;
     background-color:black;
-    right: 0px;
+    right:-4px;
     left: auto;
     position: absolute;
-    top: 68%;
+    top:calc(100% - 12px);
     width: 20px;
-    height: 44px;
+    height: 30px;
     margin-top: -22px;
     z-index: 10;
     -moz-background-size: 27px 44px;
@@ -912,6 +940,7 @@ span.progress-value {
     background-position: center;
     background-repeat: no-repeat;
    margin-left:0px;
+   outline: none;
     
   }
   .swiper-slide-active{
@@ -1059,7 +1088,7 @@ span.progress-value {
 }
 
 .main_logo{
-  background:#ffda44;
+ /* background:#ffda44;*/
   width: 70%;
 }
 .nopadding{padding:0px !important;}
@@ -1492,3 +1521,6 @@ span.progress-value {
 }
 
 .fr_body_content {display:block; padding-top:60px;}
+
+
+.Appointments_info_scroll {height:255px; padding-top:10px !important; padding-bottom:10px !important;}
