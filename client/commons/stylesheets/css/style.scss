@@ -263,9 +263,9 @@ header{
   @include themify(){
       color: getThemifyVariable('yellow-color');
     }
-  .fr{
+  .fr{line-height:35px;
       @include themify(){
-        font-size: getThemifyVariable('font-lg')
+        font-size: getThemifyVariable('font-md'); 
       }
     }
   b{
@@ -275,7 +275,7 @@ header{
         background:getThemifyVariable('red-color')
       }
     border-radius: 50px;
-        left: 15px;
+    right: -13px;
     padding: 5px;
     top: -5px;
   }
@@ -471,7 +471,7 @@ ul{
         position:relative;
         text-align: center;
         margin-bottom: 20px;
-        /*&:nth-child(even){padding-right:45px;}*/
+        &:nth-child(even){padding-right:45px;}
         p{
           font-size: 12px; margin-bottom:5px;
         }
@@ -877,6 +877,9 @@ span.progress-value {
         border: #ffde00 solid 1px;
     border-radius: 20px;
     padding: 0px 10px;
+    @include themify(){
+      color: getThemifyVariable('red-color');
+    }
   }
   .progress_rang { 
     sub { bottom:0px; font-weight:normal; padding-left:2px;font-size: 60%;} 
