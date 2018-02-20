@@ -1,4 +1,20 @@
 Template.frLanding.onRendered(function () {
+    
+        $("#current_date").click(function(){
+          $(".current_day").show();
+          $(".previous_day, .next_day").hide();
+        });
+    
+        $("#next_date").click(function(){
+          $(".next_day").show();
+          $(".current_day, .previous_day").hide();
+        });
+
+        $("#prev_date").click(function(){
+          $(".previous_day").show();
+          $(".current_day, .next_day").hide();
+        });
+
            
          var swiper = new Swiper('.swiper-day', {
                 
@@ -68,6 +84,9 @@ Template.frLanding.onRendered(function () {
             }
         }
     });
+
+
+
 });
 
 

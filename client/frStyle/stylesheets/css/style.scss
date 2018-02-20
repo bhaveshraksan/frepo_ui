@@ -3,9 +3,9 @@ http://sassbreak.com/watch-your-sass/
 sass --watch path/to/sass1:path/to/css1 path/to/sass2:path/to/css2 path/to/sass3:path/to/css3
 
 */
-	
+  
   @import "../themes/themes";
-	//@import "icons.css";
+  //@import "icons.css";
 
 @font-face {
     font-family: 'ticking_timebomb_bbregular';
@@ -70,10 +70,10 @@ sass --watch path/to/sass1:path/to/css1 path/to/sass2:path/to/css2 path/to/sass3
 //
 html {height:100%;}
 body {
-	@include themify(){
-		background-color: getThemifyVariable('black-color') !important;
-		color: getThemifyVariable('second-color');
-	}
+  @include themify(){
+    background-color: getThemifyVariable('black-color') !important;
+    color: getThemifyVariable('second-color');
+  }
   font-family: 'Roboto', sans-serif;
   height:100%;
 }
@@ -114,40 +114,40 @@ a{
   margin-right: 30px;
   
   &:before{
-  	border-radius: 50% 0 0 50%;	
+    border-radius: 50% 0 0 50%; 
   }
 }
 
 
 .container {
-	 @include themify() {
+   @include themify() {
     background-color: getThemifyVariable('background');
   }
 }
 
 .test{
-	@include themify() {
+  @include themify() {
     background-color: getThemifyVariable('color-alpha');
     font-size: getThemifyVariable('font-size');
     text-decoration: getThemifyVariable('text-decoration');
   }
-	h1{
-		color: $color-white;
-	}
+  h1{
+    color: $color-white;
+  }
 }
 
 .test2{
-	@include themify(){
-		display: getThemifyVariable('display-none');
-	}
-	background-color:#fff000;
+  @include themify(){
+    display: getThemifyVariable('display-none');
+  }
+  background-color:#fff000;
 }
 
 @function remy($pxsize,$dev) {
     @return ($pxsize/$dev)+px;
 }
 h1{
-	font-size:remy(64,4);
+  font-size:remy(64,4);
 }
 
 /*header Starts*/
@@ -275,7 +275,7 @@ header{
         background:getThemifyVariable('red-color')
       }
     border-radius: 50px;
-    right: -13px;
+        left: 15px;
     padding: 5px;
     top: -5px;
   }
@@ -588,7 +588,18 @@ ul{
     }
   }
   }
-  .ofline_statusbar {display:inline-block; height:49px; width:100%;}
+  .ofline_statusbar {display:inline-block; height:49px; width:100%; overflow:hidden;
+    .current_day {display:block;}
+    .previous_day {display:none; padding:0 0 0 32px;
+      a {
+        @include themify(){
+          color: getThemifyVariable('yellow-color');
+        }
+        font-size:17px; line-height:49px;
+      }
+    }
+    .next_day {display:none;}
+  }
   .focusMargin{
     padding-bottom:4px;
     padding-right:12px;
@@ -800,6 +811,7 @@ span.progress-value {
   -moz-box-shadow:0 2px 2px #888;
   position: relative;
   height: 25px;
+  cursor:pointer;
   @include themify(){
     border:getThemifyVariable('border-xs') solid getThemifyVariable('gray-color');
     color: getThemifyVariable('gray-color');
@@ -1527,3 +1539,6 @@ span.progress-value {
 
 
 .Appointments_info_scroll {height:255px; padding-top:10px !important; padding-bottom:10px !important;}
+
+
+
