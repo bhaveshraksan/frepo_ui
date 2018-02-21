@@ -1206,10 +1206,30 @@ span.progress-value {
            }
         }
       }
+      a:active{
+        @include themify(){
+          background:getThemifyVariable('yellow-color');
+          color:getThemifyVariable('black-color');
+          i{
+            color:getThemifyVariable('black-color');
+          }
+          label{
+            span{
+              color:getThemifyVariable('black-color');
+            }
+          }
+       }
+      }
     }
    .startTrip{
+      width:110px;
       @include themify(){
         background:getThemifyVariable('green-color');
+     }
+     i{
+      @include themify(){
+      color:getThemifyVariable('yellow-color');
+      }
      }
     
      span{
@@ -1217,16 +1237,56 @@ span.progress-value {
         color:getThemifyVariable('black-color');
      }
      }
+     &:active{
+      @include themify(){
+        background:getThemifyVariable('green-color');
+     }
+     i{
+      @include themify(){
+      color:getThemifyVariable('yellow-color');
+      }
+     }
+    
+     span{
+      @include themify(){
+        color:getThemifyVariable('black-color');
+     }
+     }
+     }
     }
+   
     .endTrip{
+      width:110px;
+      padding:11px;
       display: none;
       @include themify(){
         background:getThemifyVariable('red-color');
      }
+     i{
+      @include themify(){
+      color:getThemifyVariable('yellow-color');
+      }
+     }
     
      span{
       @include themify(){
         color:getThemifyVariable('black-color');
+     }
+     }
+     &:active{
+      @include themify(){
+        background:getThemifyVariable('red-color');
+     }
+     i{
+      @include themify(){
+      color:getThemifyVariable('yellow-color');
+      }
+     }
+    
+     span{
+      @include themify(){
+        color:getThemifyVariable('black-color');
+     }
      }
      }
     }
