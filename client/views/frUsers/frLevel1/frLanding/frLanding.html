@@ -136,13 +136,11 @@
             </div>
             <div class="row">
               <div class="ofline_statusbar">
-                <div class="col-md-3 text-right focusMargin color_yellow">Arrow<br/>Head</div>
-                <div class="col-md-5 swiper-container offline_list"> 
-                    <ul class="swiper-wrapper">
-                        <li class="swiper-slide">
-                          <a href="#"><img src="/images/dummy-image2.jpg"></a>
-                        </li>
-                        <li class="swiper-slide">
+                <div class="current_day">
+                  <div class="col-md-3 text-right focusMargin color_yellow">Arrow<br/>Head</div>
+                  <div class="col-md-5 swiper-container offline_list"> 
+                      <ul class="swiper-wrapper">
+                          <li class="swiper-slide">
                             <a href="#"><img src="/images/dummy-image2.jpg"></a>
                           </li>
                           <li class="swiper-slide">
@@ -160,13 +158,21 @@
                                   <li class="swiper-slide">
                                       <a href="#"><img src="/images/dummy-image2.jpg"></a>
                                     </li>
+                                    <li class="swiper-slide">
+                                        <a href="#"><img src="/images/dummy-image2.jpg"></a>
+                                      </li>
 
-                      </ul>
+                        </ul>
+                  </div>
+                  <div class="col-md-4 text-left offlineMargin">
+                    <span class="fr fr-offline_download"></span>
+                    <label> Offline <br/>Re-Download</label>
+                  </div>
                 </div>
-                <div class="col-md-4 text-left offlineMargin">
-                  <span class="fr fr-offline_download"></span>
-                  <label> Offline <br/>Re-Download</label>
+                <div class="previous_day">
+                    <a href="#"><span class="fr-view_dashboard"></span>&nbsp;&nbsp;View Dashboard</a>
                 </div>
+                <div class="next_day"></div>
               </div>
             </div>
           </div>
@@ -238,35 +244,6 @@
               <span class="circle sm fill-black border-green"><span class="fr fr-campaigns_input"></span>5%</span>
             </div>
           </li>
-
-          <li>
-            <p>Distributors</p>
-            <div class="Analytics_block">
-              <span class="circle md border-yellow">229</span>
-              <span class="circle sm fill-black border-yellow"><span class="fr fr-campaigns_input"></span>6%</span>
-            </div>
-          </li>
-          <li>
-            <p>Distributors</p>
-            <div class="Analytics_block">
-              <span class="circle md border-yellow">229</span>
-              <span class="circle sm fill-black border-yellow"><span class="fr fr-campaigns_input"></span>6%</span>
-            </div>
-          </li>
-          <li>
-            <p>Distributors</p>
-            <div class="Analytics_block">
-              <span class="circle md border-yellow">229</span>
-              <span class="circle sm fill-black border-yellow"><span class="fr fr-campaigns_input"></span>6%</span>
-            </div>
-          </li>
-          <li>
-            <p>Distributors</p>
-            <div class="Analytics_block">
-              <span class="circle md border-yellow">229</span>
-              <span class="circle sm fill-black border-yellow"><span class="fr fr-campaigns_input"></span>6%</span>
-            </div>
-          </li>
         </ul>
       
         </div>
@@ -301,9 +278,9 @@
           </div>
           <div class="swiper-container swiper-day">
             <div class="swiper-wrapper">
-              <div class="swiper-slide"><p class="date_swipe"><b></b>01</p></div>
-              <div class="swiper-slide date_color_yellow"><p class="date_swipe"><b></b>02</p></div>
-              <div class="swiper-slide date_color_yellow"><p class="date_swipe"><b></b>03</p></div>
+              <div id="current_date" class="swiper-slide"><p class="date_swipe"><b></b>01</p></div>
+              <div id="next_date" class="swiper-slide date_color_yellow"><p class="date_swipe"><b></b>02</p></div>
+              <div id="prev_date" class="swiper-slide date_color_yellow"><p class="date_swipe"><b></b>03</p></div>
               <div class="swiper-slide date_color_yellow"><p class="date_swipe"><b></b>04</p></div>
               <div class="swiper-slide"><p class="date_swipe"><b></b>05</p></div>
               <div class="swiper-slide"><p class="date_swipe"><b></b>06</p></div>
