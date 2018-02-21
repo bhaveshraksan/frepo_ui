@@ -1152,16 +1152,19 @@ span.progress-value {
     li{
       text-align:center;
       margin:0 5px;
+     
       a{
         display:inline-block;
         border-radius:10px;
-      padding:10px;
+        padding:10px;
       @include themify(){
         border:getThemifyVariable('yellow-color') 1px solid;
         color:getThemifyVariable('white-color');
-        span{
+        i{
           padding-right:10px;
+        
           input{
+            padding:5px;
             background: getThemifyVariable('black-color');
             border:getThemifyVariable('yellow-color') 1px solid;
           }
@@ -1171,12 +1174,21 @@ span.progress-value {
           float:left;
           @include themify(){
             color:getThemifyVariable('yellow-color');
+            font-size:20px;
+            margin-top:2px;
+            font-weight:800;
          }
         }
-        span{
+       i span{
           margin:4 0px;
           line-height: 14px;
-        }    
+        } 
+        label:nth-child(1){
+          line-height: 30px;
+          border-left:none;
+          text-align: center;
+          padding-left:0px;
+        }   
         label{
           border-left:2px solid #fff;
            padding-left:9px;
@@ -1195,12 +1207,35 @@ span.progress-value {
         }
       }
     }
+   .startTrip{
+      @include themify(){
+        background:getThemifyVariable('green-color');
+     }
+    
+     span{
+      @include themify(){
+        color:getThemifyVariable('black-color');
+     }
+     }
+    }
+    .endTrip{
+      display: none;
+      @include themify(){
+        background:getThemifyVariable('red-color');
+     }
+    
+     span{
+      @include themify(){
+        color:getThemifyVariable('black-color');
+     }
+     }
+    }
 }
 
 .frAppointmentStyle{
-  padding:10px;
+  padding:6px;
   padding-right:0px;
-  margin:20px;
+  margin:10px;
   @include themify(){
     border: 1px getThemifyVariable('yellow-color') solid;
     }
@@ -1216,8 +1251,8 @@ span.progress-value {
      
      img
      {
-      width:30%;
-      height:100px;
+      width:39%;
+      height:120px;
       border-radius: 50%;
       padding:2px;
       @include themify(){
@@ -1241,14 +1276,16 @@ span.progress-value {
           span{
         @include themify(){
           color:getThemifyVariable('yellow-color');
+          font-weight: 800;
            }
         }
            label{
             @include themify(){
               color:getThemifyVariable('white-color');
-              font-size: 14px;
+              font-size: 18px;
+              font-weight: 100;
            }
-           font-weight: 100;
+           
            .re_sheduledStyle{
             @include themify(){
               color:getThemifyVariable('yellow-color');
@@ -1308,21 +1345,21 @@ span.progress-value {
     padding-top:0px;
     margin:0px;
     float:right;
-    height:100px;
+    height:120px;
     width:15px;
     position:relative;
     top:0px;
     right:0px;
     bottom: 0;
     cursor: pointer; /* Add a pointer on hover */
-    border-bottom-left-radius: 50%;
-    border-top-left-radius: 50%;
+    border-bottom-left-radius: 60%;
+    border-top-left-radius: 60%;
     @include themify(){
       background-color: getThemifyVariable('yellow-color');
       color:getThemifyVariable('black-color');
       }
       span{
-        top:50px;
+        top:60px;
         position:absolute;
         margin:1px;
     }
@@ -1336,7 +1373,7 @@ span.progress-value {
   right:-19px;
   position:fixed; 
   width: 50%;
-  height: 100px;
+  height: 120px;
   -webkit-transition: all .5s;
     -moz-transition: all .5s;
     transition: all .5s;
@@ -1364,7 +1401,7 @@ span.progress-value {
     text-align: center;
     padding:0;
     margin:0;
-    line-height: 45px;
+    line-height: 63px;
     cursor: pointer; 
     i{
       display: block;
@@ -1382,24 +1419,29 @@ span.progress-value {
         }
     }
    }
-     li:nth-child(1)
-     {   background-color: green;
-        
+     li:nth-child(1){
+     @include themify(){
+      background-color:getThemifyVariable('green-color');
+      }
 
      }   
      
     li:nth-child(2)
-     {   background-color: green;
-         
-
+     {    @include themify(){
+      background-color:getThemifyVariable('red-color');
+      }
      }   
       li:nth-child(3)
-     {  background-color:grey;
+     {    @include themify(){
+      background-color:getThemifyVariable('gray-color');
+      }
       
 
      }   
     li:nth-child(4)
-     {   background-color:grey;
+     {     @include themify(){
+      background-color:getThemifyVariable('gray-color');
+      }
       i{
       @include themify(){
         color:getThemifyVariable('white-color');
