@@ -23,9 +23,51 @@
      
       padding-left:6px;
     }
-    .timeStyle{
-      label{
-       font-size:14px;
+    .containerAppointment{
+    .frAppointmentStyle{
+      a 
+      {   
+       img
+       {
+        width:55%;
+        height:117px;
+        border-radius: 50%;
+       
       }
     }
+    .timeStyle{
+      span{
+        
+        margin:0 15px;
+        padding:10 0px;
+        
+      }
+      label{
+       
+          font-weight:200;
+      }
+      .summaryStyle{
+        width:92%;
+        line-height: 26px;
+        background-color: #dfdfdf;
+        margin:2px;
+        span{
+             
+            font-size:14px;
+           padding-left:0px;
+           i{
+             padding:4px;
+             font-weight:200;
+           }
+        }
+       
+      }
+    }
+    .sideOverlay{
+      &.is_open{
+        right:-43px;;
+      } 
+    }
   }
+ }
+}
