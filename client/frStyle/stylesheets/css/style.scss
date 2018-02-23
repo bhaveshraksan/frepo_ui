@@ -389,7 +389,7 @@ ul{
 .left_curve { 
   perspective: 600px;
 
-  .box {
+  .fr_box {
     h1{
       text-align: center;
       font-weight: bold;
@@ -443,7 +443,7 @@ ul{
 
 .right_curve {
   perspective: 600px;
-  .box {
+  .fr_box {
     @include themify(){
       border:getThemifyVariable('border-md') solid getThemifyVariable('red-color');
     }
