@@ -7,7 +7,7 @@ Template.frAppointmentListing.onRendered(function () {
         //$('.side_arrow').click(function(){
          $("#"+id).removeClass("sideOverlay_close");
         $("#"+id).toggleClass("is_open");
-          $(this).parents(".sideOverlay").find(".side_arrow span").toggleClass('fa-chevron-left fa-chevron-right');
+          $(this).parents("#"+id).find(".side_arrow span").toggleClass('fa-chevron-left fa-chevron-right');
         });
     });
         $('.startTrip').click(function(){

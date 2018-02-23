@@ -1,0 +1,160 @@
+<template name="frComponents">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.min.css" />
+
+<div class="container-fluid">
+    <div class="row">
+    <div class="container">
+      <h1>Components</h1>
+      <hr/>
+      <form class="form-horizontal form-fields">
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Email: </label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Select: </label>
+    <div class="col-sm-10">
+    <span class="select-icon">
+      <select class="form-control" id="inputEmail3">
+        <option>Select1</option><option>Select2</option><option>Select3</option>
+      </select> </span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Textarea: </label>
+    <div class="col-sm-10">
+    <textarea class="form-control" placeholder="Enter your comments here" rows="4"></textarea>
+    </div>
+  </div>
+  
+  <!-- <div class="form-group">
+  <label class="col-sm-2 control-label">Date: </label>
+        <div class="col-sm-10 date">
+            <div class="input-group input-append date" id="datePicker">
+                <input  type="text" class="form-control" name="date" placeholder="Feb-02-2018" />
+                <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+            </div>
+        </div>
+    </div> -->
+    <div class="form-group">
+    <label class="col-sm-2 control-label">Checkbox: </label>
+    <div class="col-sm-10">
+  <label class="custom-checkbox" >Remember Me
+                      <input type="checkbox" checked="checked">
+                      <span class="checkmark"></span> </label>
+
+                      <label class="custom-checkbox">Remember Me
+                      <input type="checkbox" >
+                      <span class="checkmark"></span> </label>
+
+
+                      <label class="custom-checkbox">Remember Me
+                      <input type="checkbox" >
+                      <span class="checkmark"></span> </label>
+
+                      <label class="custom-checkbox">Remember Me
+                      <input type="checkbox" >
+                      <span class="checkmark"></span> </label>
+                      </div>
+                      </div>
+
+
+                      <div class="form-group">
+                      <label class="col-sm-2 control-label">Radio: </label>
+                      <div class="col-sm-10">
+                      <label class="custom-radio">One
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="custom-radio">Two
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="custom-radio">Three
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="custom-radio">Four
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                      </label>
+                      </div>
+                      </div>
+  
+</form>
+Tabs
+<!--tabs -->
+
+<div class="custom-tabs">
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Tab1</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Tab2</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Tab3</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Tab4</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">Tab1...</div>
+    <div role="tabpanel" class="tab-pane" id="profile">Tab2...</div>
+    <div role="tabpanel" class="tab-pane" id="messages">Tab3...</div>
+    <div role="tabpanel" class="tab-pane" id="settings">Tab4...</div>
+  </div>
+
+</div>
+<br/><br/><br/>
+<!--tabs close -->
+Pagination
+<!-- Pagination start -->
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+<!-- Pagination end -->
+Star Rating
+<!-- star rating -->
+<div class="star-rating">
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
+</div>
+
+<br/><br/>
+Switcher
+<div class="onoffswitch">
+        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+        <label class="onoffswitch-label" for="myonoffswitch">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+        </label>
+    </div>
+
+<br/><br/><br/><br/><br/><br/>
+    </div>
+
+    </div>
+  </div>
+</template>
+
