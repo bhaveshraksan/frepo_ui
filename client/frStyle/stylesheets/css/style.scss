@@ -750,7 +750,7 @@ span.progress-value {
 }
 ///////////////////////////////////////////////////////////
 
-.circle{
+.circle{ 
   &.lg{
     border-radius:50%;
     display: block;
@@ -766,6 +766,7 @@ span.progress-value {
     height: 80px;
     text-align: center;
     line-height: 80px;
+    background:inherit;
   }
   &.sm{
     border-radius:50%;

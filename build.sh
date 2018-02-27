@@ -9,7 +9,7 @@ cd .meteor/docker
 #sudo groupadd docker
 #sudo usermod -aG docker $USER
 
-docker build -t dockerhub.raksan.in/fieldeagles/fieldrepo:ui .
-cd ../../
-docker login dockerhub.raksan.in
-docker push dockerhub.raksan.in/fieldeagles/fieldrepo:ui
+docker build -t dockerhub.raksan.in/fieldeagles/fieldrepo:uilocal .
+# cd ../../
+# docker login dockerhub.raksan.in
+# docker push dockerhub.raksan.in/fieldeagles/fieldrepo:ui
