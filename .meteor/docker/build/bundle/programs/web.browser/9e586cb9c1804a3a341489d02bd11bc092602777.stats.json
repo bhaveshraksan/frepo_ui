@@ -3,8 +3,8 @@
     "name": "standard-minifier-js",
     "version": "2.3.2"
   },
-  "totalMinifiedBytes": 722440,
-  "totalMinifiedGzipBytes": 206585,
+  "totalMinifiedBytes": 738441,
+  "totalMinifiedGzipBytes": 207847,
   "minifiedBytesByPackage": {
     "packages/meteor.js": 8962,
     "packages/meteor-base.js": 31,
@@ -13,14 +13,14 @@
     "packages/ecmascript.js": 30,
     "packages/modules-runtime.js": 4023,
     "packages/modules.js": [
-      110508,
+      110477,
       {
         "node_modules": {
           "meteor": {
             "modules": {
               "client.js": 124,
               "css.js": 261,
-              "install-packages.js": 2210,
+              "install-packages.js": 2179,
               "process.js": 347,
               "reify.js": 149,
               "stubs.js": 97,
@@ -734,7 +734,6 @@
         }
       }
     ],
-    "packages/insecure.js": 28,
     "packages/mongo.js": [
       9260,
       {
@@ -750,8 +749,6 @@
     ],
     "packages/blaze-html-templates.js": 40,
     "packages/reactive-var.js": 818,
-    "packages/standard-minifier-css.js": 41,
-    "packages/standard-minifier-js.js": 40,
     "packages/webapp.js": [
       887,
       {
@@ -791,7 +788,6 @@
       }
     ],
     "packages/shell-server.js": 32,
-    "packages/autopublish.js": 31,
     "packages/underscore.js": 14349,
     "packages/deps.js": 111,
     "packages/jquery.js": [
@@ -841,6 +837,8 @@
     "packages/fortawesome_fontawesome.js": 43,
     "packages/swiper_swiper.js": 63634,
     "packages/maazalik_malihu-jquery-custom-scrollbar.js": 36716,
+    "packages/standard-minifier-css.js": 41,
+    "packages/standard-minifier-js.js": 40,
     "packages/livedata.js": 105,
     "packages/hot-code-push.js": 33,
     "packages/launch-screen.js": 787,
@@ -858,7 +856,7 @@
     ],
     "app/global-imports.js": 1054,
     "app/app.js": [
-      28321,
+      44416,
       {
         "client": {
           "views": {
@@ -877,12 +875,15 @@
               },
               "frLevel1": {
                 "frAppointmentListing": {
-                  "template.frAppointmentListing.js": 5763,
-                  "frAppointmentListing.js": 329
+                  "template.frAppointmentListing.js": 15519,
+                  "frAppointmentListing.js": 553
+                },
+                "frComponents": {
+                  "template.frComponents.js": 6416
                 },
                 "frLanding": {
                   "template.frLanding.js": 14600,
-                  "frLanding.js": 1313
+                  "frLanding.js": 809
                 }
               }
             },
@@ -892,7 +893,7 @@
           },
           "lib": {
             "routers": {
-              "frMrRouters.js": 256
+              "frMrRouters.js": 336
             }
           },
           "frStyle": {

@@ -148,9 +148,6 @@
       "path": "packages/webapp.js"
     },
     {
-      "path": "packages/autopublish.js"
-    },
-    {
       "node_modules": "npm/node_modules/meteor/ddp-server/node_modules",
       "sourceMap": "packages/ddp-server.js.map",
       "path": "packages/ddp-server.js"
@@ -166,9 +163,6 @@
       "path": "packages/binary-heap.js"
     },
     {
-      "path": "packages/insecure.js"
-    },
-    {
       "node_modules": "npm/node_modules/meteor/mongo/node_modules",
       "sourceMap": "packages/mongo.js.map",
       "path": "packages/mongo.js"
@@ -178,12 +172,6 @@
     },
     {
       "path": "packages/reactive-var.js"
-    },
-    {
-      "path": "packages/standard-minifier-css.js"
-    },
-    {
-      "path": "packages/standard-minifier-js.js"
     },
     {
       "node_modules": "npm/node_modules/meteor/server-render/node_modules",
@@ -276,6 +264,12 @@
     },
     {
       "path": "packages/maazalik_malihu-jquery-custom-scrollbar.js"
+    },
+    {
+      "path": "packages/standard-minifier-css.js"
+    },
+    {
+      "path": "packages/standard-minifier-js.js"
     },
     {
       "path": "packages/livedata.js"
