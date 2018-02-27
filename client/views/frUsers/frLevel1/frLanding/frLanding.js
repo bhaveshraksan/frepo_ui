@@ -1,5 +1,16 @@
 Template.frLanding.onRendered(function () {
-    
+      var options = {
+       autoflip: "true",
+       autoflipdelay: '2s', //indicates how long to wait between two consective flips
+      }
+      $(".card-container").flip(options);
+
+
+        $(".footer_arrow").click(function(){
+          $(".fr_landing_body").toggleClass("fr_footer_open")
+
+        });
+
         $("#current_date").click(function(){
           $(".current_day").show();
           $(".previous_day, .next_day").hide();
@@ -84,6 +95,52 @@ Template.frLanding.onRendered(function () {
     //         }
     //     }
     // });
+
+      Meteor.defer(function(){
+
+        //Sales Achieved
+        var perValue = $(".sales_achieved").attr("aria-valuenow");
+
+        if(perValue<=33){
+            $(".sales_achieved").addClass("red");
+        }
+        else if(perValue>33 && perValue<=66){
+             $(".sales_achieved").addClass("yellow");
+        }
+        else{
+             $(".sales_achieved").addClass("green");
+        }
+
+        // Revenue Progress
+
+        var perValue = $(".revenue_progress").attr("aria-valuenow");
+
+        if(perValue<=33){
+            $(".revenue_progress").addClass("red");
+        }
+        else if(perValue>33 && perValue<=66){
+             $(".revenue_progress").addClass("yellow");
+        }
+        else{
+             $(".revenue_progress").addClass("green");
+        }
+
+        // Spent Progress
+
+        var perValue = $(".spent_progress").attr("aria-valuenow");
+
+        if(perValue<=33){
+            $(".spent_progress").addClass("red");
+        }
+        else if(perValue>33 && perValue<=66){
+             $(".spent_progress").addClass("yellow");
+        }
+        else{
+             $(".spent_progress").addClass("green");
+        }
+
+      });
+
 });
 
 

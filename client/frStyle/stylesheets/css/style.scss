@@ -69,6 +69,7 @@ sass --watch path/to/sass1:path/to/css1 path/to/sass2:path/to/css2 path/to/sass3
 //
 // Styles
 //
+.no-border {border:none !important; }
 html {height:100%;}
 body {
   @include themify(){
@@ -293,7 +294,7 @@ footer{
     transition: all .5s;
     z-index: 2;
   &.footer_close{
-    height: 24px !important;
+    height: 20px !important;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     transition: all .5s;
@@ -389,7 +390,7 @@ ul{
 .left_curve { 
   perspective: 600px;
 
-  .box {
+  .fr_box {
     h1{
       text-align: center;
       font-weight: bold;
@@ -407,43 +408,42 @@ ul{
     margin:0px;
     padding-bottom: 10px;
     list-style: none;
-    //max-height: 360px;  
-   // overflow-y: auto;
-   
-    // &:hover{
-    //   overflow: auto;
-    // }
     .mCSB_container {margin:0px;}
     li{
-      width: 50%;
-      display: inline-block;
+      width: 100%;
+      display: block;
       text-align: center;
       float:left;
-      padding:0 10px;
+      padding:2px 10px 8px;
       @include themify(){
         border-bottom:getThemifyVariable('border-mxs') solid getThemifyVariable('gray-color');
       }
       &:nth-last-child(1) {
-          border-bottom:0px;
-          }
-          &:nth-last-child(2) {
-          border-bottom:0px;
-          }
+        border-bottom:0px;
+      }
+          
       b{
         display: block;
         font-size: 30px;
+        span {
+          padding-left:5px;
+        }
       }
-      p {display:block; font-size:12px; min-height:34px;}
-
+      p {display:block; font-size:12px; margin-bottom: 0px;}
+      .fr_analytics_data {
+        display:inline-block;
+        float: left;
+        width: 50%;
+      }
     }
   }
-.mCSB_dragger_bar {background-color:red !important; float:right;}
+/*.mCSB_dragger_bar {background-color:red !important; float:right;}*/
 }
 
 
 .right_curve {
   perspective: 600px;
-  .box {
+  .fr_box {
     @include themify(){
       border:getThemifyVariable('border-md') solid getThemifyVariable('red-color');
     }
@@ -497,7 +497,7 @@ ul{
 .middle_curve{
   margin-top: 10px;
   .border-right-white{ 
-    &:after{ display:block; content:""; height:calc(100% - 20px); position: absolute; top: 10px; right: 0px;
+    &:after{ display:block; content:""; height:calc(100% - 20px); position: absolute; top: 10px; right: -2px;
      @include themify(){
         border-right:getThemifyVariable('border-mxs') solid getThemifyVariable('white-color');
       }
@@ -566,6 +566,7 @@ ul{
         width:calc(100% - 55px);
         margin:0px;
         font-size: 14px;
+        padding-right: 15px;
       }
     }
   }
@@ -585,6 +586,7 @@ ul{
         float: left;
         width:calc(100% - 80px);
         font-size: 14px; margin:0px;
+        padding-right: 15px;
       }
     }
   }
@@ -694,6 +696,10 @@ section{
   margin:100px auto; 
   height:1000px;
 }
+.progressText {
+  display:block;
+  padding-bottom:2px;
+}
 .progress{
   position: relative;
   border-radius:20px;
@@ -714,23 +720,27 @@ section{
 
 }
 .progress-bar{
-  @include themify(){
-    background:getThemifyVariable('red-color');
-  }
+  background:none;
   border-bottom-left-radius: 30px;
   border-top-left-radius: 30px;
   transition: width 1.5s ease-in-out;
   line-height: 25px;
+  border-radius: 12px;
+  &.red {
+    @include themify(){
+      background-color:getThemifyVariable('red-color') !important;
+    }
+  }
   &.green{
-        @include themify(){
-          background-color:getThemifyVariable('green-color') !important;
-        }
-      }
-       &.yellow{
-        @include themify(){
-          background-color:getThemifyVariable('yellow-color') !important;
-        }
-      }
+    @include themify(){
+      background-color:getThemifyVariable('green-color') !important;
+    }
+  }
+  &.yellow{
+    @include themify(){
+      background-color:getThemifyVariable('yellow-color') !important;
+    }
+  }
 }
 span.progress-value {
   position: absolute;
@@ -871,15 +881,19 @@ span.progress-value {
   min-height: 120px;
   .fa-star{
     position:relative;
+    font-size:55px;
     @include themify(){
       color: getThemifyVariable('yellow-color');
     }
     span{
       position:absolute;
-          font-size: 14px;
-    left: 13px;
-    font-weight: bold;
-    top: 14px;
+      font-size: 15px;
+      left: 0;
+      font-weight: bold;
+      top: calc(50% - 10px);
+      display:block;
+      width:100%;
+      text-align:center;
       @include themify(){
         color: getThemifyVariable('black-color');
       }
@@ -888,7 +902,7 @@ span.progress-value {
   }
   .location{
         border: #ffde00 solid 1px;
-    border-radius: 20px;
+    border-radius:5px;
     padding: 3px 10px;
     line-height:30px;
     @include themify(){
@@ -898,9 +912,18 @@ span.progress-value {
   .progress_rang { 
     sub { bottom:0px; font-weight:normal; padding-left:2px;font-size: 60%;} 
   }
+  .card-container {
+    width:100%;
+    height:105px;
+    .back {
+      sub {
+        bottom:4px;
+        padding-left:3px;
+        font-size:60%;
+      }
+    }
+  }
 }
-
-
 .swiper-month{
   width:190px;
   text-align: center;
@@ -1012,7 +1035,6 @@ span.progress-value {
   }
 }
 
-
 #star5 {
  margin: 50px 0;
  position: relative;
@@ -1067,7 +1089,6 @@ span.progress-value {
  -o-transform: rotate(-70deg); content:"";
 }
 
-
 .color_red{
   @include themify(){
     color: getThemifyVariable('red-color') !important;
@@ -1115,6 +1136,7 @@ span.progress-value {
 .nopaddingleft{padding-left:0px !important}
 .nopaddingright{padding-right:0px !important}
 
+
 .fr_body_content{
   overflow: hidden;
 //breadcrumb//
@@ -1147,22 +1169,27 @@ span.progress-value {
 }
 
 
-/* Icon List */
-.icon_list{ 
+/* fr_List_tabs */
+
+.fr_List_tabs{ 
     padding:4px;
     list-style:none;
     display:flex;
     li{
       text-align:center;
       margin:0 5px;
-     
+      flex: auto;
+      cursor:pointer;
+      @include themify(){
+        border:getThemifyVariable('border-xs') solid getThemifyVariable('yellow-color');
+        border-radius:10px;
+      }
       a{
         display:inline-block;
-        border-radius:10px;
         padding:10px;
       @include themify(){
-        border:getThemifyVariable('yellow-color') 1px solid;
         color:getThemifyVariable('white-color');
+
         i{
           padding-right:10px;
         
@@ -1175,6 +1202,7 @@ span.progress-value {
       }
         .fr{
           float:left;
+          
           @include themify(){
             color:getThemifyVariable('yellow-color');
             font-size:20px;
@@ -1192,8 +1220,11 @@ span.progress-value {
           text-align: center;
           padding-left:0px;
         }   
-        label{
-          border-left:2px solid #fff;
+        label{ cursor:pointer;
+          @include themify(){
+            border-left:getThemifyVariable('border-xs') solid getThemifyVariable('white-color');
+           }
+          
            padding-left:9px;
            font-weight:normal;
            margin:0px;
@@ -1209,7 +1240,7 @@ span.progress-value {
            }
         }
       }
-      a:active{
+      &.active{
         @include themify(){
           background:getThemifyVariable('yellow-color');
           color:getThemifyVariable('black-color');
@@ -1217,6 +1248,9 @@ span.progress-value {
             color:getThemifyVariable('black-color');
           }
           label{
+            color:getThemifyVariable('black-color');
+            border-color: getThemifyVariable('black-color');
+
             span{
               color:getThemifyVariable('black-color');
             }
@@ -1224,311 +1258,204 @@ span.progress-value {
        }
       }
     }
-   .startTrip{
-      width:110px;
-      @include themify(){
-        background:getThemifyVariable('green-color');
-     }
-     i{
-      @include themify(){
-      color:getThemifyVariable('yellow-color');
-      }
-     }
-    
-     span{
-      @include themify(){
-        color:getThemifyVariable('black-color');
-     }
-     }
-     &:active{
-      @include themify(){
-        background:getThemifyVariable('green-color');
-     }
-     i{
-      @include themify(){
-      color:getThemifyVariable('yellow-color');
-      }
-     }
-    
-     span{
-      @include themify(){
-        color:getThemifyVariable('black-color');
-     }
-     }
-     }
+  &.filter_tabs {
+    a { padding:5px 10px;
+    .fr {line-height:31px;}
     }
-   
-    .endTrip{
-      width:110px;
-      padding:11px;
-      display: none;
-      @include themify(){
-        background:getThemifyVariable('red-color');
-     }
-     i{
-      @include themify(){
-      color:getThemifyVariable('yellow-color');
-      }
-     }
-    
-     span{
-      @include themify(){
-        color:getThemifyVariable('black-color');
-     }
-     }
-     &:active{
-      @include themify(){
-        background:getThemifyVariable('red-color');
-     }
-     i{
-      @include themify(){
-      color:getThemifyVariable('yellow-color');
-      }
-     }
-    
-     span{
-      @include themify(){
-        color:getThemifyVariable('black-color');
-     }
-     }
-     }
-    }
+  }
 }
-.containerAppointment{  
 
-        .frAppointmentStyle{
-          
-          padding:6px;
-          padding-right:0px;
-          margin:10px;
-          @include themify(){
-            border: 1px getThemifyVariable('yellow-color') solid;
-            }
-          .customCheckbox{
+.fr_appointment_wrap{  
+  .fr_appoint_person_list{     
+    padding:8px;
+    padding-right:0px;
+    margin:10px;
+    position: relative;
+    overflow-x:hidden;
+    @include themify(){
+      border: 1px getThemifyVariable('yellow-color') solid;
+    }
+      .fr_appoint_person {
+        display:inline-block;
+        width: 150px; 
+        text-align:center;
+        padding-top: 20px;
+        .customCheckbox{
             background-color: #000;
             @include themify(){
             border: 1px getThemifyVariable('yellow-color') solid;
             }
           }
-            a 
-            { 
-            padding:2px;
-            
-            img
-            {
-              width:39%;
-              height:120px;
-              border-radius: 50%;
-              padding:2px;
+          figure { 
+            display:inline;
+            img{
               @include themify(){
                 border: getThemifyVariable('border-xs') getThemifyVariable('yellow-color') solid;
-              
-                }  
-              }  
+              } 
+              padding: 4px;
+              width: 100px;
+              height: 100px;
+              border-radius: 50%;
+              }
             }
-            .columnSplit{
-              list-style: none;   
-              display:inline-block;
-              -webkit-column-count: 2;
-              -moz-column-count: 2;
-              column-count: 2;
-              -webkit-column-gap: 5px;
-              column-gap: 5px;
-              -moz-column-gap: 5px;
-          
-              li{
-                a{
-                  span{
+        }
+      .fr_appoint_person_data {
+        display:inline-block;
+        width: calc(100% - 150px);
+        ul { 
+          padding:7px 0 9px 0; 
+          margin: 0px;
+          li { list-style-type: none;
+              padding:0 0 9px 0;
+            p {
+              margin:0px;
+              span{ 
+                display:inline-block;
+                width:40px;
+                text-align: center;
                 @include themify(){
                   color:getThemifyVariable('yellow-color');
                   font-weight: 800;
-                  }
                 }
-                  label{
-                    @include themify(){
-                      color:getThemifyVariable('white-color');
-                      font-size: 18px;
-                      font-weight: 100;
-                  }
-                  
-                  .re_sheduledStyle{
-                    @include themify(){
-                      color:getThemifyVariable('yellow-color');
-                  }
-                  }
-                  }
               }
-            }  
-          }
-          .timeStyle{
-            span{
               @include themify(){
-              font-size:getThemifyVariable('font-md');
-              color:getThemifyVariable('yellow-color');
-              }
-              margin:0 40px;
-              padding:10 0px;
-              
-            }
-            label{
-              @include themify(){
-                font-size:getThemifyVariable('font-lg');
                 color:getThemifyVariable('white-color');
-                }
-                font-weight:200;
+                font-size: 18px;
+                font-weight: 100;
+              }
             }
-            .summaryStyle{
-              width:80%;
-              line-height: 26px;
-              background-color: #dfdfdf;
-              margin:2px;
-              span{
+          &:nth-last-child(1){padding:0px;}
+          }
+        }
+        .fr_meeting_schedule {
+          display: inline-block;
+          label {
+            height:30px;
+            display: block;
+            text-align:right;
+            .fr-meeting{
                 @include themify(){
-                  color:getThemifyVariable('black-color');
-                  }        
-                  font-size:18px;
-                padding-left:0px;
-                i{
-                  padding:2px;
-                }
-              }
-            
-            }
-          }
-          .sideOverlay
-          {   padding-right:0px;
-              padding-left:0px;
-            &.sideOverlay_close{
-              height: 24px !important;
-              -webkit-transition: all .5s;
-              -moz-transition: all .5s;
-              transition: all .5s;
-              z-index: 2;
-            
-            }
-            .side_arrow{
-            padding-top:0px;
-            margin:0px;
-            float:right;
-            height:120px;
-            width:15px;
-            position:relative;
-            top:0px;
-            right:0px;
-            bottom: 0;
-            cursor: pointer; /* Add a pointer on hover */
-            border-bottom-left-radius: 220px;
-            border-top-left-radius: 220px;
-            @include themify(){
-              background-color: getThemifyVariable('yellow-color');
-              color:getThemifyVariable('black-color');
-              }
-              span{
-                top:60px;
-                position:absolute;
-                margin:1px;
-            }
-          }
-          .side_icons{
-            display: none;
-          }
-
-        
-        &.is_open{   /*display:none;*/
-          right:-56px;
-          position:absolute; 
-          width: 50%;
-          height: 120px;
-          -webkit-transition: all .5s;
-            -moz-transition: all .5s;
-            transition: all .5s;
-            z-index: 2;
-            .side_arrow{
-              right:100%;
-            }
-              .iconsStyle{
-                width:100%;
-                margin:0;
-                padding:0;
-            .side_icons{
-              display: flex;
-            list-style: none;
-            margin:0;
-            padding:0;
-          margin-left:0px;
-          -webkit-column-gap: 0px;
-          column-gap: 0px;
-          -moz-column-gap: 0px;
-
-          li{
-            flex-direction: row;
-            width:23%;
-            text-align: center;
-            padding:0;
-            margin:0;
-            line-height: 63px;
-            cursor: pointer; 
-            i{
-              display: block;
-              font-size:35px;
-              font-weight: 800;
-              margin-top:20px;
-              @include themify(){
+                font-size:getThemifyVariable('font-md');
                 color:getThemifyVariable('yellow-color');
                 }
             }
-            span{
-              font-size:15px;
-              @include themify(){
-                color:getThemifyVariable('white-color');
-                }
-            }
           }
-            li:nth-child(1){
+          h6{
+            text-align: center;
+            display: block;
             @include themify(){
-              background-color:getThemifyVariable('green-color');
+              font-size:getThemifyVariable('font-lg');
+              color:getThemifyVariable('white-color');
               }
-
-            }   
-            
-            li:nth-child(2)
-            {    @include themify(){
-              background-color:getThemifyVariable('red-color');
-              }
-            }   
-              li:nth-child(3)
-            {    @include themify(){
-              background-color:getThemifyVariable('gray-color');
-              }
-              
-
-            }   
-            li:nth-child(4)
-            {     @include themify(){
-              background-color:getThemifyVariable('gray-color');
-              }
-              i{
-              @include themify(){
-                color:getThemifyVariable('white-color');
-                }
-              }
-
-            }    
+            font-weight:200;
           }
-          
-          
-          }
-          }
-        
-
+          p{
+            display: inline-block;
+            line-height: 26px;
+            text-transform:capitalize;
+            padding: 6px 20px;
+            border-radius:4px;
+            @include themify(){
+              /*background-color:getThemifyVariable('red-color');*/
+              font-size:getThemifyVariable('font-md');
+              color:getThemifyVariable('black-color');
+            }
+            background-color: #dfdfdf;
+              .fr{
+                  padding:0 10px 0 0;
+              }
+            }
         }
-} 
+      }
+    }
+  } 
+.fr_slide_overlay {
+  display:block;
+  position: absolute;
+  top: 0px;
+  right:-482px;
+  -webkit-transition: .5s ease-in-out; 
+  -moz-transition: .5s ease-in-out;
+   -o-transition: .5s ease-in-out; 
+   transition: .5s ease-in-out;
+  &.open_slide {
+    right: 0px;
+    .fr_slide_overlay_click {
+      i {
+        transform:rotate(180deg);
+      }
+    }
+  }
+  .fr_slide_overlay_click {
+    display: inline-block;
+    float: left;
+    width: 25px;
+    background: orange;
+    height: 160px;
+    border-radius: 50%;
+    position: absolute;
+    width: 67px;
+    z-index: 9;
+    left: -31px;
+    padding: 0 0 0 5px;
+    i {
+      display:inline-block;
+      line-height: 160px;
+      font-weight:bold;
+      cursor:pointer;
+      @include themify(){
+        color:getThemifyVariable('black-color');
+        font-size:getThemifyVariable('font-md');
+      }
+    }
+  }
+  ul {
+    display:block;
+    float: right;
+    padding:0px;
+    position: relative;
+    z-index: 99;
+    margin:0px;
+    li {
+      display:inline-block;
+      float: left;
+      cursor: pointer;
+      a {
+          display:block;
+          text-align: center;
+          padding:24px 20px 25px;
+          @include themify(){
+            color:getThemifyVariable('white-color');
+            font-size:getThemifyVariable('font-md');
+          }
+        span {
+          display:block;
+          font-size:60px;
+          font-weight:bold;
+          padding-bottom: 20px;
+          @include themify(){
+             color:getThemifyVariable('yellow-color');
+          }
+        }
+      }
+    &.fr_start {
+      background:red;
+      }
+    &.fr_cancel {
+      background:orange;
+      }
+    &.fr_edit {
+      background:green;
+      }
+    &.fr_Re-schedule {
+      background:brown;
+      }
+    }
+  }
+
 }
+
 }
-
-
-
-
 
 /* Checkbox switch */
 
@@ -1910,4 +1837,18 @@ select.form-control{
     right: 0px; 
 }
 
+.fr_landing_body {height:calc(100% - 3px); /*overflow: auto;*/ -webkit-transition: all .5s ease-in-out; -moz-transition: all .5s ease-in-out; -o-transition: all .5s ease-in-out; -ms-transition: all .5s ease-in-out; transition: all .5s ease-in-out;}
+.fr_landing_body>.row {height:100%;}
+.fr_footer_open {height: calc(100% - 62px);}
+.la_left_block, .la_middle_block, .la_right_block {height:100%;} 
+.left_curve, .right_curve {height: calc(100% - 133px);}
+.fr_box {height:100%;}
+.left_curve .fr_box>ul, .right_curve .fr_box>ul {height:calc(100% - 35px);}
+.fr_la_full_height {height:100%;}
+.middle_curve {height:calc(100% - 76px);}
+.fr_middle_curve_in {height:calc(100% - 180px);}
+.fr_middle_curve_data {height:calc(100% - 55px);}
+.fr_landing_body .mCSB_container  {margin-right:0px;}
+.fr_landing_body .mCSB_dragger_bar {background-color:red !important; float:right;}
+.mCSB_scrollTools {width:4px;}
 

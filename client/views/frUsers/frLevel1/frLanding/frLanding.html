@@ -1,13 +1,13 @@
 <template name="frLandingPerformanceAnalytics">
   <div class="row progress_block">
-      <div class="col-md-3 nopaddingright text-center">My Rank<br /><div class="fa fa-star fa-3x"><span>25</span></div>
+      <div class="col-md-3 nopaddingright text-center">My Rank<br /><div class="fa fa-star fa-3x"><span>005</span></div>
       <span class="location">Zonal</span>
       </div>
       <div class="col-md-6 nopaddingright text-center">
         <div class="barWrapper">
           <span class="progressText">Sales Achieved</span>
           <div class="progress">
-            <div class="progress-bar red" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" > 
+            <div class="progress-bar sales_achieved" id="bar1" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" > 
               <span class="popOver" data-toggle="tooltip" data-placement="top" title="#"> </span> 
               <span class="progress-value">Rs 24,000</span> 
             </div>
@@ -16,54 +16,75 @@
         </div>
       </div>
       <div class="col-md-3 nopaddingright text-center">
-      <b class="color_yellow font_lg">09</b><br />
+      <!-- <b class="color_yellow font_lg">09</b><br />
+      Days<br /> to go -->
+        <div class="card-container" data-direction="lr" data-speed="500ms" data-timingfunction="ease">
+           <div class="card">
+               <div class="front">
+                   <b class="color_yellow font_lg">09</b><br />
       Days<br /> to go
+               </div>
+               <div class="back">
+                   <b class="color_yellow font_lg">20<sub>%</sub></b><br />need to Achieve
+               </div>
+           </div>
+        </div>
       </div>
   </div>
    
   <div class="left_curve">
-      <div class="box">
+      <div class="fr_box">
         <h1>Performance Analytics</h1>
           <ul class="md_scroll">
             <li>
-              <b class="color_green">15 <span class="fa fa-eye color_yellow" aria-hidden="true"></span></b>
-              <p>Dr.Call Average</p>
+              <div class="fr_analytics_data">
+                <b class="color_green">15<span class="fa fa-eye color_yellow" aria-hidden="true"></span></b>
+                <p>Dr.Call Average</p>
+              </div>
+              <div class="fr_analytics_data">
+                <b class="color_green">32%<span class="fa fa-eye color_yellow" aria-hidden="true"></span></b>
+                <p>Dr.Coverage %</p>
+              </div>
             </li>
             <li>
-              <b class="color_green">32% <span class="fa fa-eye color_yellow" aria-hidden="true"></span></b>
-              <p>Dr.Coverage %</p>
+              <div class="fr_analytics_data">
+                <b class="color_green">23<span class="fa fa-eye color_yellow" aria-hidden="true"></span></b>
+                <p>Budget Target Achieved</p>
+              </div>
+              <div class="fr_analytics_data">
+                <b class="color_green">8%<span class="fa fa-eye color_yellow" aria-hidden="true"></span></b>
+                <p>HQ Receivable % Avg [ in Days ]</p>
+              </div>
             </li>
             <li>
-              <b class="color_green">23</b>
-              <p>Budget Target Achieved</p>
+              <div class="fr_analytics_data">
+                <b class="color_red">23<span class="fa fa-eye color_yellow" aria-hidden="true"></span></b>
+                <p>Build Brand Target Achieved</p>
+              </div>
+              <div class="fr_analytics_data">
+                <b class="color_red">6d<span class="fa fa-eye color_yellow" aria-hidden="true"></span></b>
+                <p>Expenses Submission Pending</p>
+              </div>
             </li>
             <li>
-              <b class="color_green">8%</b>
-              <p>HQ Receivable % Avg [ in Days ]</p>
+              <div class="fr_analytics_data">
+                <b class="color_green">23<span class="fa fa-eye color_yellow" aria-hidden="true"></span></b>
+                <p>Inventory Request Pending</p>
+              </div>
+              <div class="fr_analytics_data">
+                <b class="color_green">2<span class="fa fa-eye color_yellow" aria-hidden="true"></span></b>
+                <p>New Travel Requests</p>
+              </div>
             </li>
             <li>
-              <b class="color_red">23</b>
-              <p>Build Brand Target Achieved</p>
-            </li>
-            <li>
-              <b class="color_red">6d <span class="fa fa-eye color_yellow" aria-hidden="true"></span></b>
-              <p>Expenses Submission Pending</p>
-            </li>
-            <li>
-              <b class="color_green">23</b>
-              <p>Inventory Request Pending</p>
-            </li>
-            <li>
-              <b class="color_green">2</b>
-              <p>New Travel Requests</p>
-            </li>
-            <li>
-              <b class="color_green">5</b>
-              <p>Joint Work Request Pending</p>
-            </li>
-            <li>
-              <b class="color_green">4 <span class="fa fa-eye color_yellow" aria-hidden="true"></span></b>
-              <p>New Updates From Manager</p>
+              <div class="fr_analytics_data">
+                <b class="color_green">5<span class="fa fa-eye color_yellow" aria-hidden="true"></span></b>
+                <p>Joint Work Request Pending</p>
+              </div>
+              <div class="fr_analytics_data">
+                <b class="color_green">4<span class="fa fa-eye color_yellow" aria-hidden="true"></span></b>
+                <p>New Updates From Manager</p>
+              </div>
             </li>
           </ul>
       </div>
@@ -83,55 +104,59 @@
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3806.2034899438754!2d78.3610176144399!3d17.449971888041144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1516088529552" frameborder="0" style="border:0"></iframe>
 
         
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-6 border-right-white">
-                <ul class="left md_scroll Appointments_info_scroll">
-                  <li>                
-                    <b class="color_green">15</b>
-                    <p><i class="fa fa-eye pull-right fa-2x color_yellow" aria-hidden="true"></i>Total<br /> Appointments</p>
-                  </li>
-                  <li>
-                    <b class="color_yellow">07</b>
-                    <p>Appointment<br /> Complentes</p>
-                  </li>
-                  <li>
-                    <b class="color_yellow">03</b>
-                    <p>Appointment<br /> Missed</p>
-                  </li>
-                  <li>
-                    <b class="color_yellow">03</b>
-                    <p>Appointment<br /> Re-Scheduled</p>
-                  </li>
-                  <li>
-                    <b class="color_yellow">02</b>
-                    <p>Appointment<br /> Cancelled</p>
-                  </li>
-                </ul>
+          <div class="container-fluid fr_middle_curve_in">
+            <div class="row fr_middle_curve_data">
+              <div class="col-md-6 border-right-white fr_la_full_height">
+                <div class="row fr_la_full_height">
+                  <ul class="left md_scroll Appointments_info_scroll fr_la_full_height">
+                    <li>                
+                      <b class="color_green">15</b>
+                      <p><i class="fa fa-eye pull-right fa-2x color_yellow" aria-hidden="true"></i>Total<br /> Appointments</p>
+                    </li>
+                    <li>
+                      <b class="color_yellow">07</b>
+                      <p>Appointment<br /> Complented</p>
+                    </li>
+                    <li>
+                      <b class="color_yellow">03</b>
+                      <p>Appointment<br /> Missed</p>
+                    </li>
+                    <li>
+                      <b class="color_yellow">03</b>
+                      <p>Appointment<br /> Re-Scheduled</p>
+                    </li>
+                    <li>
+                      <b class="color_yellow">02</b>
+                      <p>Appointment<br /> Cancelled</p>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="col-md-6">
-                <ul class="right md_scroll Appointments_info_scroll">
-                  <li>
-                    <span><b class="color_yellow">06</b>/<b class="color_green">10</b></span>
-                    <p>Doctors<br /> [Achived/Planned]</p>
-                  </li>
-                  <li>
-                    <span><b class="color_red">03</b><b class="color_green">10</b></span>
-                    <p>Pharmacists<br /> [Achived/Planned]</p>
-                  </li>
-                  <li>
-                    <span><b class="color_red">01</b>/<b class="color_green">03</b></span>
-                    <p>Hospitals<br /> [Achived/Planned]</p>
-                  </li>
-                  <li>
-                    <span><b class="color_green">03</b>/<b class="color_green">03</b></span>
-                    <p>Distributors<br /> [Achived/Planned]</p>
-                  </li>
-                  <li>
-                    <span><b class="color_yellow">00</b>/<b class="color_yellow">00</b></span>
-                    <p>Instituions<br /> [Achived/Planned]</p>
-                  </li>
-                </ul>
+              <div class="col-md-6 fr_la_full_height">
+                <div class="row fr_la_full_height">
+                  <ul class="right md_scroll Appointments_info_scroll fr_la_full_height">
+                    <li>
+                      <span><b class="color_yellow">06</b>/<b class="color_green">10</b></span>
+                      <p>Doctors<br /> [Achived/Planned]</p>
+                    </li>
+                    <li>
+                      <span><b class="color_red">03</b>/<b class="color_green">10</b></span>
+                      <p>Pharmacists<br /> [Achived/Planned]</p>
+                    </li>
+                    <li>
+                      <span><b class="color_red">01</b>/<b class="color_green">03</b></span>
+                      <p>Hospitals<br /> [Achived/Planned]</p>
+                    </li>
+                    <li>
+                      <span><b class="color_green">03</b>/<b class="color_green">03</b></span>
+                      <p>Distributors<br /> [Achived/Planned]</p>
+                    </li>
+                    <li>
+                      <span><b class="color_yellow">00</b>/<b class="color_yellow">00</b></span>
+                      <p>Instituions<br /> [Achived/Planned]</p>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
             <div class="row">
@@ -139,30 +164,14 @@
                 <div class="current_day">
                   <div class="col-md-3 text-right focusMargin color_yellow">Arrow<br/>Head</div>
                   <div class="col-md-5 swiper-container offline_list"> 
-                      <ul class="swiper-wrapper">
-                          <li class="swiper-slide">
-                            <a href="#"><img src="/images/dummy-image2.jpg"></a>
-                          </li>
-                          <li class="swiper-slide">
-                              <a href="#"><img src="/images/dummy-image2.jpg"></a>
-                            </li>
-                            <li class="swiper-slide">
-                                <a href="#"><img src="/images/dummy-image2.jpg"></a>
-                              </li>
-                              <li class="swiper-slide">
-                                  <a href="#"><img src="/images/dummy-image2.jpg"></a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#"><img src="/images/dummy-image2.jpg"></a>
-                                  </li>
-                                  <li class="swiper-slide">
-                                      <a href="#"><img src="/images/dummy-image2.jpg"></a>
-                                    </li>
-                                    <li class="swiper-slide">
-                                        <a href="#"><img src="/images/dummy-image2.jpg"></a>
-                                      </li>
-
-                        </ul>
+                    <ul class="swiper-wrapper">
+                      <li class="swiper-slide">
+                        <a href="#"><img src="/images/dummy-image2.jpg"></a>
+                      </li>
+                      <li class="swiper-slide">
+                        <a href="#"><img src="/images/dummy-image2.jpg"></a>
+                      </li>
+                    </ul>
                   </div>
                   <div class="col-md-4 text-left offlineMargin">
                     <span class="fr fr-offline_download"></span>
@@ -181,32 +190,32 @@
 </template>
 <template name="frLandingRelationshipAnalytics">
   <div class="row progress_block">
-        <div class="col-md-8">
+        <div class="col-md-6 nopaddingright">
           <div class="barWrapper">
             <span class="progressText">Revenue Per Division</span>
             <div class="progress tooltip_none">
-              <div class="progress-bar yellow" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" > 
+              <div class="progress-bar revenue_progress" id="bar2" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" > 
                 <span class="popOver" data-toggle="tooltip" data-placement="top" title="#"> </span> 
                 <span class="progress-value">Rs 24,000</span> 
               </div>
             </div>
           </div>
           <div class="barWrapper">
-            <span class="progressText">Spnd Per Division</span>
+            <span class="progressText">Spend Per Division</span>
             <div class="progress tooltip_none">
-              <div class="progress-bar yellow" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" > 
+              <div class="progress-bar spent_progress" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" > 
                 <span class="popOver" data-toggle="tooltip" data-placement="top" title="#"> </span> 
                 <span class="progress-value">Rs 24,000</span> 
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4"><br/><br/>
+        <div class="col-md-3 nopaddingright text-center"><br/><br/>
           <b class="color_yellow font_lg progress_rang">8<sub>X</sub></b><br />
         </div>
       </div>
       <div class="right_curve">
-        <div class="box">
+        <div class="fr_box">
         <h1>Relationship Analytics</h1>
         <ul class="md_scroll">
           <li>
@@ -250,7 +259,7 @@
       </div>
 </template>
 <template name="frLanding">
-  <div class="container-fluid fr_body_content">
+  <div class="container-fluid fr_body_content fr_landing_body fr_footer_open">
     <div class="row">
 
       <div class="col-md-3 la_left_block">
